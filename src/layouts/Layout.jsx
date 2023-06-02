@@ -24,6 +24,12 @@ const listLeftMenu = [
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
   { name: "รายได้", icon: <Description />, path: "/income" },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
+  { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
+  {
+    name: "ปริมาณการเดินทางข้ามจังหวัด",
+    icon: <Description />,
+    path: "/tripvolumn",
+  },
   { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
   { name: "ใบขับขี่", icon: <Description />, path: "" },
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
@@ -41,13 +47,7 @@ const listLeftMenu = [
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
-  { name: "ความเร็วในการเดินทาง", icon: <Description />, path: "" },
   { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
-  {
-    name: "ปริมาณการเดินทางข้ามจังหวัด",
-    icon: <Description />,
-    path: "/middlezone",
-  },
 ];
 
 export default function PermanentDrawerLeft() {

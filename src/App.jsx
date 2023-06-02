@@ -6,6 +6,7 @@ import Occupation from "./pages/occupation";
 import Residentpage from "./pages/residentpage";
 import Incomepage from "./pages/incomepage";
 import Proposalpage from "./pages/proposal";
+import TripVolumn from "./pages/tripvolumn";
 import theme from "./theme.jsx";
 import Layout from "./layouts/Layout";
 import { Route, Routes } from "react-router-dom";
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="occupation" element={<Occupation />} />
             <Route path="middlezone" element={<Middlepage />} />
             <Route path="proposal" element={<Proposalpage />} />
+            <Route path="tripvolumn" element={<TripVolumn />} />
           </Route>
         </Routes>
       </ThemeProvider>

@@ -4,13 +4,14 @@ import Middlezonepic from "../assets/images/transport-mid.png";
 
 const middlezone = () => {
   return (
-    <Grid container direction="row">
+    <Grid container direction="row" alignContent="center">
       <Grid item xs>
-        <TableProvince />
-        <br />
         <img src={Middlezonepic} width={700} />
+        <br />
       </Grid>
-      <Grid item xs={5}></Grid>
+      <Grid item>
+        <TableProvince />
+      </Grid>
     </Grid>
   );
 };
