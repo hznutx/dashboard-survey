@@ -116,7 +116,7 @@ const rows = [
   ),
 ];
 
-const StyledTableCell = styled(TableCell)({});
+const StyledTableCell = styled(TableCell)({ padding: 4 });
 
 export default function BasicTable() {
   return (

@@ -177,10 +177,6 @@ export default function BasicTable() {
               <TableCell align="right">{row.pathum}</TableCell>
               <TableCell align="right">{row.samutprakan}</TableCell>
               <TableCell align="right">{row.samutsakorn}</TableCell>
-              <TableCell align="right">{row.nakornpathom}</TableCell>
-              <TableCell align="right">{row.ayuttaya}</TableCell>
-              <TableCell align="right">{row.chachengsow}</TableCell>
-              <TableCell align="right">{row.outspace}</TableCell>
             </TableRow>
           ))}
         </TableBody>

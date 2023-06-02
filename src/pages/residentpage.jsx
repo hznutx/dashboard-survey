@@ -8,15 +8,16 @@ import DoughnutCareer from "../components/DoughnutCareer";
 const residentpage = () => {
   return (
     <Stack height="100vh">
-      <Grid container>
-        <Grid item xs display="flex" gap={4}>
+      <Grid container gap={4}>
+        <Grid item xs={8}>
           <TablePopulation />
-          <Divider />
-          <Box width={600}>
+        </Grid>
+        <Grid item xs>
+          {" "}
+          <Box width={400}>
             <ResidentChart />
           </Box>
         </Grid>
-        <Grid item xl={5}></Grid>
       </Grid>
       <Grid container gap={5} pt={5}>
         <Grid item xs>
