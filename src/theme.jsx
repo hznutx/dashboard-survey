@@ -21,6 +21,17 @@ const theme = createTheme({
     },
     caption: { fontSize: "14px" },
   },
+
+  components: {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          padding: 10,
+          textAlign: "center",
+        },
+      },
+    },
+  },
 });
 
 export default theme;

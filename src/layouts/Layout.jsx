@@ -7,21 +7,24 @@ import { Description } from "@mui/icons-material";
 import { Divider, ListItemButton, Typography } from "@mui/material";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
-const drawerWidth = 300;
+const drawerWidth = 280;
 
 const listLeftMenu = [
-  { name: "เพศและอายุ", icon: <Description />, path: "/age-gender" },
-  { name: "ประชากรแฝง", icon: <Description />, path: "/population" },
   {
-    name: "ความสามารถในการเดินทาง",
+    name: "สัดส่วนประชากรตามช่วงอายุและเพศ",
     icon: <Description />,
-    path: "/transportcapacity",
+    path: "/population",
   },
-  { name: "ลักษณะที่พัก", icon: <Description />, path: "" },
-  { name: "รายได้", icon: <Description />, path: "" },
-  { name: "อาชีพ", icon: <Description />, path: "" },
+  // { name: "ประชากรแฝง", icon: <Description />, path: "" },
+  // {
+  //   name: "ความสามารถในการเดินทาง",
+  //   icon: <Description />,
+  //   path: "/transportcapacity",
+  // },
+  { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
+  { name: "รายได้", icon: <Description />, path: "/income" },
+  { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
-  { name: "สัดส่วนประชากรตามช่วงอายุ", icon: <Description />, path: "" },
   { name: "ใบขับขี่", icon: <Description />, path: "" },
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
   { name: "ความพึงพอใจในการเดินทาง", icon: <Description />, path: "" },
@@ -30,13 +33,21 @@ const listLeftMenu = [
     icon: <Description />,
     path: "",
   },
-  { name: "กลุ่มวัตถุประสงค์การเดินทาง", icon: <Description />, path: "" },
+  {
+    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    icon: <Description />,
+    path: "/proposal",
+  },
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
   { name: "ความเร็วในการเดินทาง", icon: <Description />, path: "" },
   { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
-  { name: "การเดินทางข้ามจังหวัด", icon: <Description />, path: "" },
+  {
+    name: "ปริมาณการเดินทางข้ามจังหวัด",
+    icon: <Description />,
+    path: "/middlezone",
+  },
 ];
 
 export default function PermanentDrawerLeft() {

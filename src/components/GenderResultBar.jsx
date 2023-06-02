@@ -16,21 +16,21 @@ const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: [10],
-      backgroundColor: "rgb(255, 99, 132)",
-      stack: "Stack 0",
-    },
-    {
-      label: "Dataset 2",
-      data: [10],
+      label: "วัยเรียน 9.1%",
+      data: [9.1],
       backgroundColor: "rgb(75, 192, 192)",
       stack: "Stack 0",
     },
     {
-      label: "Dataset 3",
-      data: [10],
-      backgroundColor: "rgb(53, 162, 235)",
+      label: "วัยทำงาน 77.0%",
+      data: [77],
+      backgroundColor: "rgb(198, 198, 198)",
+      stack: "Stack 0",
+    },
+    {
+      label: "วัยสูงอายุ 13.9%",
+      data: [13.9],
+      backgroundColor: "rgb(255, 204, 84)",
       stack: "Stack 0",
     },
   ],
@@ -41,7 +41,7 @@ const options = {
   plugins: {
     title: {
       display: true,
-      text: "Chart.js Bar Chart - Stacked",
+      text: "สัดส่วนประชากรตามช่วงอายุ",
     },
   },
   responsive: true,
@@ -54,7 +54,10 @@ const options = {
       grid: { display: false, stacked: true },
     },
     x: {
-      ticks: { display: false },
+      ticks: {
+        display: true,
+        callback: (value) => `${value}%`, // Add '%' sign to tick labels
+      },
       grid: { display: false },
       stacked: true,
     },
@@ -72,7 +75,7 @@ ChartJS.register(
 
 export default function GenderBar(props) {
   return (
-    <div style={{ width: "40vw" }}>
+    <div style={{ height: "30vh" }}>
       <Bar options={options} data={data} />
     </div>
   );

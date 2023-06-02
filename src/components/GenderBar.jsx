@@ -11,6 +11,7 @@ import {
 } from "chart.js";
 
 const labels = [
+  "อายุ",
   "71 - 80 <",
   "61 - 70",
   "51 - 60",
