@@ -3,8 +3,8 @@ import React from "react";
 
 const TableTripvolumn = () => {
   return (
-    <Paper sx={{ width: "fit-content", p: 3 }}>
-      <Typography>
+    <Paper sx={{ width: "fit-content", p: 2 }}>
+      <Typography fontSize="12px">
         1 ย่านดุสิต ราชเทวี <br />
         2 ย่านสาทร ยานนาวา <br />
         3 ย่านบางพลัด คลองสาน <br />

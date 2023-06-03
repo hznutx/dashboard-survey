@@ -26,7 +26,9 @@ const theme = createTheme({
     MuiTableCell: {
       styleOverrides: {
         root: {
-          padding: 10,
+          padding: 1,
+          fontSize: "11.5px",
+          lineHeight: 2,
           textAlign: "center",
         },
       },

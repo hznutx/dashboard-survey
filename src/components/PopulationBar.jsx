@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import theme from "../theme";
 
 const labels = [
   "ทั้งพื้นที่",
@@ -123,7 +124,7 @@ ChartJS.register(
 
 export default function GenderBar(props) {
   return (
-    <div style={{ width: "40vw", height: "35vh" }}>
+    <div className="canvas" style={{ fontFamily: "kanit" }}>
       <Bar options={options} data={data} />
     </div>
   );

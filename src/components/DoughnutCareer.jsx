@@ -32,10 +32,9 @@ const data = {
 
 const options = {
   responsive: true,
+  outerHeight: "200",
   plugins: {
-    legend: {
-      position: "right",
-    },
+    legend: { position: "right" },
   },
 };
 
@@ -53,7 +52,14 @@ ChartJS.register(
 export default function DoughnutChart(props) {
   // const {sa} = props
   return (
-    <div style={{ height: "50vh", width: "50vw" }}>
+    <div
+      className="canvas"
+      style={{
+        display: "inline",
+        maxHeight: 200,
+        dominantBaseline: "reset-size",
+      }}
+    >
       <Doughnut data={data} options={options} />
     </div>
   );

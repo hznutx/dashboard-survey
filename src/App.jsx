@@ -17,7 +17,8 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Routes>
           {/* <Route path="/" element={<Intro />} /> */}
-          <Route path="/" element={<Layout />}>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Populationpage />} />
             <Route path="population" element={<Populationpage />} />
             <Route path="transportcapacity" element={<Capacitypage />} />
             <Route path="resident" element={<Residentpage />} />

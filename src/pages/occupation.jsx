@@ -9,7 +9,7 @@ const occupation = () => {
         <TableCapacity />
         <Divider />
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={12} xl={4}>
         <DoughnutCareer />
       </Grid>
     </Grid>

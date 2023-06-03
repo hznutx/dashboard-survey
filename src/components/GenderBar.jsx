@@ -77,7 +77,7 @@ ChartJS.register(
 
 export default function GenderBar(props) {
   return (
-    <div style={{ height: "45vh", width: "45vw" }}>
+    <div>
       <Bar options={options} data={data} />
     </div>
   );

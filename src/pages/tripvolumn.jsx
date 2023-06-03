@@ -5,19 +5,17 @@ import TripvolumnPic from "../assets/images/clutertrip.jpg";
 
 const tripvolumn = () => {
   return (
-    <Stack justifyItems="center">
-      <Grid container justifyItems="center" gap={5}>
-        <Grid item xs>
-          <img src={TripvolumnPic} width={1000} />
-        </Grid>
-        <Grid item xs>
-          <TabelTripvolumn />
-        </Grid>
-        <Grid item xs>
-          <TabelTripresult />
-        </Grid>
+    <Grid container display="flex" spacing={2}>
+      <Grid item xs={12} md={9}>
+        <img src={TripvolumnPic} width="100%" />
       </Grid>
-    </Stack>
+      <Grid item xs>
+        <TabelTripvolumn />
+      </Grid>
+      <Grid item xs={12}>
+        <TabelTripresult />
+      </Grid>
+    </Grid>
   );
 };
 

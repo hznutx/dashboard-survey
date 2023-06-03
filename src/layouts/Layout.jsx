@@ -7,7 +7,7 @@ import { Description } from "@mui/icons-material";
 import { Divider, ListItemButton, Typography } from "@mui/material";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
-const drawerWidth = 280;
+const drawerWidth = { xs: "10%", md: "20%" };
 
 const listLeftMenu = [
   {
@@ -50,7 +50,7 @@ const listLeftMenu = [
   { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
 ];
 
-export default function PermanentDrawerLeft() {
+export default function PermanentDrawerLeft(menubar) {
   const location = useLocation();
 
   return (
@@ -59,6 +59,7 @@ export default function PermanentDrawerLeft() {
       <Drawer
         sx={{
           width: drawerWidth,
+          overflow: "hidden",
           flexShrink: 0,
           "& .MuiDrawer-paper": {
             background: "#16213E",
@@ -69,7 +70,9 @@ export default function PermanentDrawerLeft() {
         variant="permanent"
         anchor="left"
       >
-        <Typography padding={2}>Dashboard</Typography>
+        <Typography padding={2} sx={{ display: { xs: "none", md: "flex" } }}>
+          Dashboard
+        </Typography>
         <Divider />
         {listLeftMenu.map((thisMenu, index) => (
           <ListItemButton
@@ -80,7 +83,11 @@ export default function PermanentDrawerLeft() {
           >
             <ListItem sx={{ padding: 0 }}>
               {thisMenu.icon}
-              <Typography variant="caption" paddingLeft={1}>
+              <Typography
+                variant="caption"
+                paddingLeft={1}
+                sx={{ display: { xs: "none", md: "flex" } }}
+              >
                 {thisMenu.name}
               </Typography>
             </ListItem>
@@ -89,6 +96,7 @@ export default function PermanentDrawerLeft() {
       </Drawer>
       <Box
         component="main"
+        justifyContent={"center"}
         sx={{
           flexGrow: 1,
           p: 3,
