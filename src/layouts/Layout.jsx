@@ -24,26 +24,26 @@ const listLeftMenu = [
     icon: <Description />,
     path: "/population",
   },
-  // { name: "ประชากรแฝง", icon: <Description />, path: "" },
-  // {
-  //   name: "ความสามารถในการเดินทาง",
-  //   icon: <Description />,
-  //   path: "/transportcapacity",
-  // },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
   {
     name: "กลุ่มวัตถุประสงค์การเดินทาง",
     icon: <Description />,
     path: "/proposal",
   },
-  // { name: "รายได้", icon: <Description />, path: "/income" },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
+  { name: "รายได้", icon: <Description />, path: "" },
   {
     name: "ปริมาณการเดินทางข้ามจังหวัด",
     icon: <Description />,
     path: "/tripvolumn",
   },
+  {
+    name: "ความสามารถในการเดินทาง",
+    icon: <Description />,
+    path: "/transportcapacity",
+  },
+  { name: "ประชากรแฝง", icon: <Description />, path: "" },
   { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
   { name: "ใบขับขี่", icon: <Description />, path: "" },
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
@@ -134,13 +134,9 @@ export default function PermanentDrawerLeft() {
             to={thisMenu.path}
             selected={thisMenu.path === location.pathname}
           >
-            <ListItem sx={{ padding: 0 }}>
+            <ListItem disablePadding>
               {thisMenu.icon}
-              <Typography
-                variant="caption"
-                paddingLeft={1}
-                sx={{ display: "flex" }}
-              >
+              <Typography variant="caption" paddingLeft={1}>
                 {thisMenu.name}
               </Typography>
             </ListItem>
