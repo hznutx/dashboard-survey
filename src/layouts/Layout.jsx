@@ -4,7 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import ListItem from "@mui/material/ListItem";
 import "@fontsource/kanit";
 import { Description } from "@mui/icons-material";
-import { Divider, ListItemButton, Typography } from "@mui/material";
+import { AppBar, Divider, ListItemButton, Toolbar, Typography } from "@mui/material";
 import { Link, Outlet, useLocation } from "react-router-dom";
 
 const drawerWidth = { xs: "10%", md: "20%" };
@@ -56,11 +56,14 @@ export default function PermanentDrawerLeft(menubar) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
+      <AppBar sx={ {display:{xs:"flex",md:"flex",xl:"none"}}}><Toolbar>  <Typography flexGrow={1} textAlign="center" letterSpacing={2}>
+          Dashboard
+        </Typography></Toolbar></AppBar>
       <Drawer
         sx={{
           width: drawerWidth,
           overflow: "hidden",
-          flexShrink: 0,
+          flexShrink: 0,display:{xs:"none",md:"none",lg:"flex"},
           "& .MuiDrawer-paper": {
             background: "#16213E",
             color: "white",

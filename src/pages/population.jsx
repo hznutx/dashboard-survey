@@ -6,14 +6,14 @@ import GenderResult from "../components/GenderResultBar";
 
 const population = () => {
   return (
-    <Grid container spacing={2} rowGap={10}>
+    <Grid container spacing={2} rowGap={5}>
       <Grid item xs={12} md={6}>
         <GenderBar />
       </Grid>
       <Grid item xs={12} md={6}>
         <GenderResult />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={6} >
         <TablePopulation />
       </Grid>
       <Grid item xs={12} md={6}>

@@ -5,6 +5,7 @@ import { rootShouldForwardProp } from "@mui/material/styles/styled";
 const theme = createTheme({
   palette: {
     background: "#fff",
+    
   },
 
   typography: {
@@ -23,6 +24,9 @@ const theme = createTheme({
   },
 
   components: {
+    MuiAppBar:{styleOverrides:{root:{
+      backgroundColor:"#16213E",}
+     }},
     MuiTableCell: {
       styleOverrides: {
         root: {
