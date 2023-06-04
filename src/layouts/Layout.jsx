@@ -1,13 +1,22 @@
-import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import CssBaseline from "@mui/material/CssBaseline";
-import ListItem from "@mui/material/ListItem";
 import "@fontsource/kanit";
-import { Description } from "@mui/icons-material";
-import { AppBar, Divider, ListItemButton, Toolbar, Typography } from "@mui/material";
+import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  ListItem,
+  ListItemButton,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
+import { Description, MenuOpen } from "@mui/icons-material";
 
-const drawerWidth = { xs: "10%", md: "20%" };
+const drawerWidth = 260;
 
 const listLeftMenu = [
   {
@@ -50,32 +59,73 @@ const listLeftMenu = [
   { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
 ];
 
-export default function PermanentDrawerLeft(menubar) {
+export default function PermanentDrawerLeft() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const theme = useTheme();
   const location = useLocation();
+  const isLandscapeTablet = useMediaQuery(
+    "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)"
+  );
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const handleMenuIconClick = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  const handleDrawerClose = () => {
+    setIsDrawerOpen(false);
+  };
+
+  const getVariant = () => {
+    if (!isMobile) {
+      return "permanent";
+    } else {
+      return "temporary";
+    }
+  };
+
+  const getOutletWidth = () => {
+    if (isDrawerOpen && !isMobile) {
+      return `calc(100% - ${drawerWidth}px)`;
+    } else {
+      return "100%";
+    }
+  };
 
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar sx={ {display:{xs:"flex",md:"flex",xl:"none"}}}><Toolbar>  <Typography flexGrow={1} textAlign="center" letterSpacing={2}>
-          Dashboard
-        </Typography></Toolbar></AppBar>
+      <AppBar
+        position="fixed"
+        sx={{
+          zIndex: 1,
+          display: { xs: "flex", md: "none" },
+        }}
+      >
+        <Toolbar>
+          <MenuOpen
+            sx={{ marginRight: 2, cursor: "pointer" }}
+            onClick={handleMenuIconClick}
+          />
+          <Typography variant="h6" noWrap component="div">
+            Dashboard
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <Drawer
+        variant={getVariant()}
+        anchor="left"
+        open={!isMobile || isDrawerOpen}
+        onClose={handleDrawerClose}
         sx={{
           width: drawerWidth,
-          overflow: "hidden",
-          flexShrink: 0,display:{xs:"none",md:"none",lg:"flex"},
-          "& .MuiDrawer-paper": {
-            background: "#16213E",
-            color: "white",
-            width: drawerWidth,
-          },
+          flexShrink: 0,
+          ...(isMobile && {
+            isDrawerOpen,
+          }),
         }}
-        variant="permanent"
-        anchor="left"
       >
-        <Typography padding={2} sx={{ display: { xs: "none", md: "flex" } }}>
-          Dashboard
-        </Typography>
+        <Typography padding={2}>Dashboard</Typography>
         <Divider />
         {listLeftMenu.map((thisMenu, index) => (
           <ListItemButton
@@ -89,7 +139,7 @@ export default function PermanentDrawerLeft(menubar) {
               <Typography
                 variant="caption"
                 paddingLeft={1}
-                sx={{ display: { xs: "none", md: "flex" } }}
+                sx={{ display: "flex" }}
               >
                 {thisMenu.name}
               </Typography>
@@ -97,13 +147,16 @@ export default function PermanentDrawerLeft(menubar) {
           </ListItemButton>
         ))}
       </Drawer>
+      <Toolbar />
       <Box
         component="main"
         justifyContent={"center"}
+        alignItems={"center"}
         sx={{
+          display: "flex",
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: getOutletWidth(),
         }}
       >
         <Outlet />

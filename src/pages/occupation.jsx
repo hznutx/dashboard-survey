@@ -16,10 +16,10 @@ const occupation = () => {
       </Grid>
       <Grid item xs={12} md={8}>
         <TablePopulation />
-       
-       
-             </Grid>
-      <Grid item xs={8} md={3}> <ProposalChart1 /></Grid>
+      </Grid>
+      <Grid item xs={8} md={3}>
+        <ProposalChart1 />
+      </Grid>
     </Grid>
   );
 };

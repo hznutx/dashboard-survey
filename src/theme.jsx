@@ -1,11 +1,9 @@
 import "@fontsource/kanit";
 import { createTheme } from "@mui/material";
-import { rootShouldForwardProp } from "@mui/material/styles/styled";
 
 const theme = createTheme({
   palette: {
     background: "#fff",
-    
   },
 
   typography: {
@@ -24,15 +22,29 @@ const theme = createTheme({
   },
 
   components: {
-    MuiAppBar:{styleOverrides:{root:{
-      backgroundColor:"#16213E",}
-     }},
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#16213E",
+        },
+      },
+    },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          flexShrink: 0,
+          backgroundColor: "#16213E",
+          color: "white",
+        },
+      },
+    },
+
     MuiTableCell: {
       styleOverrides: {
         root: {
-          padding: 1,
           fontSize: "11.5px",
-          lineHeight: 2.4,
+          padding: 1,
+          lineHeight: 2.5,
           textAlign: "center",
         },
       },

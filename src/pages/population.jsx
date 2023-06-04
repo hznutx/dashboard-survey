@@ -13,10 +13,10 @@ const population = () => {
       <Grid item xs={12} md={6}>
         <GenderResult />
       </Grid>
-      <Grid item xs={12} md={6} >
+      <Grid item xs={12} md={10} lg={6}>
         <TablePopulation />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={12} md={10} lg={6}>
         <PopulationBar />
       </Grid>
     </Grid>
