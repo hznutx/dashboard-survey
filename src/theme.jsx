@@ -28,7 +28,7 @@ const theme = createTheme({
         root: {
           padding: 1,
           fontSize: "11.5px",
-          lineHeight: 2,
+          lineHeight: 2.4,
           textAlign: "center",
         },
       },

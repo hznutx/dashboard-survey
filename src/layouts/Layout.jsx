@@ -22,7 +22,12 @@ const listLeftMenu = [
   //   path: "/transportcapacity",
   // },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
-  { name: "รายได้", icon: <Description />, path: "/income" },
+  {
+    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    icon: <Description />,
+    path: "/proposal",
+  },
+  // { name: "รายได้", icon: <Description />, path: "/income" },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
   {
@@ -38,11 +43,6 @@ const listLeftMenu = [
     name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
     icon: <Description />,
     path: "",
-  },
-  {
-    name: "กลุ่มวัตถุประสงค์การเดินทาง",
-    icon: <Description />,
-    path: "/proposal",
   },
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },

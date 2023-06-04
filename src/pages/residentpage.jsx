@@ -7,7 +7,7 @@ import DoughnutCareer from "../components/DoughnutCareer";
 
 const residentpage = () => {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} rowGap={10}>
       <Grid item xs={12} md={8}>
         <TablePopulation />
       </Grid>

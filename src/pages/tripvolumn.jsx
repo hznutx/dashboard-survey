@@ -6,7 +6,7 @@ import TripvolumnPic from "../assets/images/clutertrip.jpg";
 const tripvolumn = () => {
   return (
     <Grid container display="flex" spacing={2}>
-      <Grid item xs={12} md={9}>
+      <Grid item xs={12} md={8}>
         <img src={TripvolumnPic} width="100%" />
       </Grid>
       <Grid item xs>

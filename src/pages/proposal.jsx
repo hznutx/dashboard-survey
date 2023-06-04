@@ -4,15 +4,13 @@ import ProposalChart1 from "../components/ProposalChart1";
 
 const proposal = () => {
   return (
-    <Grid container>
-      <Grid item xs display="flex" gap={5}>
+    <Grid container spacing={5}>
+      <Grid item xs={12} md={8}>
         <TablePopulation />
-        <Divider />
-        <Box width={600} mr={10}>
-          <ProposalChart1 />
-        </Box>
-      </Grid>
-      <Grid item xl={5}></Grid>
+       
+       
+             </Grid>
+      <Grid item xs={8} md={3}> <ProposalChart1 /></Grid>
     </Grid>
   );
 };
