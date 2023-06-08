@@ -10,45 +10,37 @@ import {
   Legend,
 } from "chart.js";
 
-const labels = ["ประชากร"];
+const labels = [""];
 
 const data = {
   labels,
   datasets: [
     {
-      label: "วัยเรียน 9.1%",
-      data: [9.1],
-      backgroundColor: "rgb(75, 192, 192)",
+      label: "ประชากรแฝง : 3,872,912",
+      data: [33],
+      backgroundColor: "#2B3467",
       stack: "Stack 0",
     },
     {
-      label: "วัยทำงาน 77.0%",
-      data: [77],
-      backgroundColor: "rgb(198, 198, 198)",
-      stack: "Stack 0",
-    },
-    {
-      label: "วัยสูงอายุ 13.9%",
-      data: [13.9],
-      backgroundColor: "rgb(255, 204, 84)",
+      label: "ประชากรทะเบียนราษฎร์ : 11,611,253",
+      data: [100],
+      backgroundColor: "#BAD7E9",
       stack: "Stack 0",
     },
   ],
 };
-
 const options = {
   indexAxis: "y",
   plugins: {
+    legend: {
+      position: "bottom",
+    },
     title: {
       display: true,
-      text: "สัดส่วนประชากรตามช่วงอายุ",
+      text: "สัดส่วนประชากรแฝง",
     },
   },
   responsive: true,
-  interaction: {
-    mode: "index",
-    intersect: false,
-  },
   scales: {
     y: {
       grid: { display: false, stacked: true },
@@ -56,10 +48,20 @@ const options = {
     x: {
       ticks: {
         display: true,
-        callback: (value) => `${value}%`, // Add '%' sign to tick labels
+        callback: (value) => `${value}%`,
       },
       grid: { display: false },
       stacked: true,
+    },
+  },
+  tooltips: {
+    enabled: true,
+    callbacks: {
+      label: function (context) {
+        const label = context.label || "";
+        const value = context.parsed.y || 0;
+        return `${label}: ${value}%`;
+      },
     },
   },
 };
@@ -73,7 +75,7 @@ ChartJS.register(
   Legend
 );
 
-export default function GenderBar(props) {
+export default function IncitizenBar(props) {
   return (
     <div>
       <Bar options={options} data={data} />

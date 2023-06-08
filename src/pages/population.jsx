@@ -7,14 +7,14 @@ import GenderResult from "../components/GenderResultBar";
 const population = () => {
   return (
     <Grid container spacing={2} rowGap={5} alignItems={"center"}>
-      <Grid item xs={12} md={6}>
-        <GenderBar />
+      <Grid item xs={12} md={10} lg={6}>
+        <TablePopulation />
       </Grid>
       <Grid item xs={12} md={6}>
         <GenderResult />
       </Grid>
-      <Grid item xs={12} md={10} lg={6}>
-        <TablePopulation />
+      <Grid item xs={12} md={6}>
+        <GenderBar />
       </Grid>
       <Grid item xs={12} md={10} lg={6}>
         <PopulationBar />

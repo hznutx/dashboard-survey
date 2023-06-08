@@ -14,7 +14,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { Description, MenuOpen } from "@mui/icons-material";
+import { ArrowBackIos, Description, MenuOpen } from "@mui/icons-material";
 
 const drawerWidth = 260;
 
@@ -24,6 +24,12 @@ const listLeftMenu = [
     icon: <Description />,
     path: "/population",
   },
+  { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
+  {
+    name: "ความสามารถในการเดินทาง",
+    icon: <Description />,
+    path: "/transportcapacity",
+  },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
   {
     name: "กลุ่มวัตถุประสงค์การเดินทาง",
@@ -32,18 +38,6 @@ const listLeftMenu = [
   },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
-  { name: "รายได้", icon: <Description />, path: "" },
-  {
-    name: "ปริมาณการเดินทางข้ามจังหวัด",
-    icon: <Description />,
-    path: "/tripvolumn",
-  },
-  {
-    name: "ความสามารถในการเดินทาง",
-    icon: <Description />,
-    path: "/transportcapacity",
-  },
-  { name: "ประชากรแฝง", icon: <Description />, path: "" },
   { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
   { name: "ใบขับขี่", icon: <Description />, path: "" },
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
@@ -56,7 +50,17 @@ const listLeftMenu = [
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
-  { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
+  { name: "รายได้", icon: <Description />, path: "" },
+  {
+    name: "ค่าใช้จ่ายในการเดินทาง",
+    icon: <Description />,
+    path: "/travelcost",
+  },
+  {
+    name: "ปริมาณการเดินทางข้ามจังหวัด",
+    icon: <Description />,
+    path: "/tripvolumn",
+  },
 ];
 
 export default function PermanentDrawerLeft() {

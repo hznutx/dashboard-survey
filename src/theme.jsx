@@ -1,13 +1,16 @@
 import "@fontsource/kanit";
 import { createTheme } from "@mui/material";
+import { Chart as ChartJS } from "chart.js";
+
+// Set the default font family
+ChartJS.defaults.font.family = "'Kanit'";
+ChartJS.defaults.font.size = "13px";
 
 const theme = createTheme({
   palette: {
     background: "#fff",
   },
-
   typography: {
-    fontWeight: 400,
     letterSpacing: 1,
     fontFamily: "Kanit",
     fontPalette: "#1A202C",
@@ -18,9 +21,8 @@ const theme = createTheme({
     h4: {
       fontSize: "45px",
     },
-    caption: { fontSize: "14px" },
+    caption: { fontSize: "14px", fontWeight: "lighter" },
   },
-
   components: {
     MuiAppBar: {
       styleOverrides: {
@@ -38,7 +40,6 @@ const theme = createTheme({
         },
       },
     },
-
     MuiTableCell: {
       styleOverrides: {
         root: {

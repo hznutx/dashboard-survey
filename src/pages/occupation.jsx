@@ -1,4 +1,4 @@
-import { Divider, Grid, Stack } from "@mui/material";
+import { Divider, Grid } from "@mui/material";
 import TableCapacity from "../components/tables/TableCapacity";
 import DoughnutCareer from "../components/DoughnutCareer";
 import TablePopulation from "../components/tables/TablePopulation";
