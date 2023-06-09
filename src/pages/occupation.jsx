@@ -1,23 +1,22 @@
 import { Divider, Grid } from "@mui/material";
-import TableCapacity from "../components/tables/TableCapacity";
+import TableOccupation from "../components/tables/TableOccupation";
 import DoughnutCareer from "../components/DoughnutCareer";
 import TablePopulation from "../components/tables/TablePopulation";
 import ProposalChart1 from "../components/ProposalChart1";
 
 const occupation = () => {
   return (
-    <Grid container gap={5}>
-      <Grid item xs>
-        <TableCapacity />
-        <Divider />
+    <Grid container gap={3}>
+      <Grid item xs={12} lg={4}>
+        <TableOccupation />
       </Grid>
-      <Grid item xs={12} xl={4}>
+      <Grid item xs>
         <DoughnutCareer />
       </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid item xs={12} lg={6}>
         <TablePopulation />
       </Grid>
-      <Grid item xs={8} md={3}>
+      <Grid item xs={12} lg={4}>
         <ProposalChart1 />
       </Grid>
     </Grid>

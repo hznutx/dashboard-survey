@@ -9,12 +9,13 @@ import {
   Drawer,
   ListItem,
   ListItemButton,
+  Stack,
   Toolbar,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { ArrowBackIos, Description, MenuOpen } from "@mui/icons-material";
+import { Description, MenuOpen } from "@mui/icons-material";
 
 const drawerWidth = 260;
 
@@ -31,6 +32,12 @@ const listLeftMenu = [
     path: "/transportcapacity",
   },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
+  { name: "รายได้", icon: <Description />, path: "/income" },
+  {
+    name: "ค่าใช้จ่ายในการเดินทาง",
+    icon: <Description />,
+    path: "/travelcost",
+  },
   {
     name: "กลุ่มวัตถุประสงค์การเดินทาง",
     icon: <Description />,
@@ -50,12 +57,7 @@ const listLeftMenu = [
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
-  { name: "รายได้", icon: <Description />, path: "" },
-  {
-    name: "ค่าใช้จ่ายในการเดินทาง",
-    icon: <Description />,
-    path: "/travelcost",
-  },
+
   {
     name: "ปริมาณการเดินทางข้ามจังหวัด",
     icon: <Description />,
@@ -70,7 +72,7 @@ export default function PermanentDrawerLeft() {
   const isLandscapeTablet = useMediaQuery(
     "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)"
   );
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   const handleMenuIconClick = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -103,7 +105,7 @@ export default function PermanentDrawerLeft() {
         position="fixed"
         sx={{
           zIndex: 1,
-          display: { xs: "flex", md: "none" },
+          display: { xs: "flex", lg: "none" },
         }}
       >
         <Toolbar>
@@ -147,20 +149,21 @@ export default function PermanentDrawerLeft() {
           </ListItemButton>
         ))}
       </Drawer>
-      <Toolbar />
-      <Box
+      <Toolbar gutters={5} disablePadding />
+      <Stack
         component="main"
         justifyContent={"center"}
         alignItems={"center"}
         sx={{
           display: "flex",
           flexGrow: 1,
-          p: 3,
+          padding: 5,
+          mt: 10,
           width: getOutletWidth(),
         }}
       >
         <Outlet />
-      </Box>
+      </Stack>
     </Box>
   );
 }

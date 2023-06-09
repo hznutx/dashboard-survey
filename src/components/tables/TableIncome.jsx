@@ -27,7 +27,7 @@ function createData(
 }
 
 const rows = [
-  createData("เฉลี่ย", "21,000", "40,600", "34,300", "32,100"),
+  createData("เฉลี่ย  (บาท)", "21,000", "40,600", "34,300", "32,100"),
   createData("กรุงเทพมหานคร", "22,000", "42,700", "40,200", "38,100"),
   createData("นนทบุรี", "22,400", "40,900", "41,100", "37,700"),
   createData("ปทุมธานี", "19,600", "36,900", "39,500", "48,600"),
@@ -45,8 +45,8 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell></TableCell>
-            <TableCell>รายได้ส่วนบุคคล</TableCell>
-            <TableCell>รายได้ครัวเรือน</TableCell>
+            <TableCell>รายได้ส่วนบุคคล (บาท)</TableCell>
+            <TableCell>รายได้ครัวเรือน (บาท)</TableCell>
             <TableCell>สสช. 2564</TableCell>
             <TableCell>สสช. 2563</TableCell>
           </TableRow>

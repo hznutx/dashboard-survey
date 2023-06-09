@@ -55,9 +55,8 @@ export default function DoughnutChart(props) {
     <div
       className="canvas"
       style={{
-        display: "inline",
-        maxHeight: 200,
-        dominantBaseline: "reset-size",
+        display: "inline-flex",
+        maxLines: 350,
       }}
     >
       <Doughnut data={data} options={options} />

@@ -1,17 +1,18 @@
-import { Divider, Grid, Stack } from "@mui/material";
-import TableCapacity from "../components/tables/TableCapacity";
+import { Divider, Grid } from "@mui/material";
+import TableTravelPossibly from "../components/tables/TableTravelPossibly";
+import TravelPossibiltyBar from "../components/TravelPossibiltyBar";
 
 const transportcapacity = () => {
   return (
-    <Stack height="100vh">
-      <Grid container>
-        <Grid item xs>
-          <TableCapacity />
-          <Divider />
-        </Grid>
-        <Grid item xl={5}></Grid>
+    <Grid container spacing={3} justifyContent={"center"}>
+      <Grid item xs={12} lg={6}>
+        <TravelPossibiltyBar />
+        <Divider />
       </Grid>
-    </Stack>
+      <Grid item xs={12}>
+        <TableTravelPossibly />
+      </Grid>
+    </Grid>
   );
 };
 

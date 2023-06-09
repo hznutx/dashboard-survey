@@ -6,13 +6,7 @@ import IncitizenBar from "../components/IncitizenBar";
 
 const immigration = () => {
   return (
-    <Grid
-      container
-      spacing={2}
-      rowGap={5}
-      alignItems={"center"}
-      justifyContent={"center"}
-    >
+    <Grid container spacing={2} rowGap={5}>
       <Grid item xs={12} lg={6}>
         <TableImmigration />
       </Grid>
