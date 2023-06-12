@@ -26,12 +26,13 @@ const listLeftMenu = [
     path: "/",
   },
   { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
+  { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
+  { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   {
     name: "ความสามารถในการเดินทาง",
     icon: <Description />,
     path: "/transportcapacity",
   },
-  { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
   { name: "รายได้", icon: <Description />, path: "/income" },
   {
     name: "ค่าใช้จ่ายในการเดินทาง",
@@ -43,7 +44,6 @@ const listLeftMenu = [
     icon: <Description />,
     path: "/proposal",
   },
-  { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
   { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
   { name: "ใบขับขี่", icon: <Description />, path: "" },

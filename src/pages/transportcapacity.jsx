@@ -4,8 +4,8 @@ import TravelPossibiltyBar from "../components/TravelPossibiltyBar";
 
 const transportcapacity = () => {
   return (
-    <Grid container rowGap={3} justifyContent={"center"}>
-      <Grid item xs={12} lg={6}>
+    <Grid container rowGap={5} justifyContent={"center"}>
+      <Grid item xs={12} md={8}>
         <TravelPossibiltyBar />
         <Divider />
       </Grid>

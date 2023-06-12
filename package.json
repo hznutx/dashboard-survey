@@ -1,16 +1,13 @@
 {
   "name": "dashboard-survey",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "yarn run vite",
+    "build": "vite build --base=/dashboard-survey",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
-  },
-  "build": {
-    "chunkSizeWarningLimit": 530000
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -19,8 +16,6 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.3",
     "chart.js": "^4.3.0",
-    "chartjs-plugin-annotation": "^3.0.1",
-    "faker": "^6.6.6",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
@@ -28,14 +23,13 @@
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
-    "@types/react": "^18.0.37",
+    "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "vite": "^4.3.9",
-    "webpack-bundle-analyzer": "^4.9.0"
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "vite": "^4.3.7"
   }
 }
