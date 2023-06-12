@@ -21,7 +21,6 @@ const theme = createTheme({
   typography: {
     letterSpacing: 1,
     fontFamily: "Kanit",
-    fontPalette: "#1A202C",
     h5: { fontSize: "25px" },
     h3: {
       fontSize: "55px",
@@ -54,6 +53,7 @@ const theme = createTheme({
           padding: 1,
           lineHeight: 2,
           textAlign: "center",
+          fontPalette: "unset",
           "@media (min-width: 300px)": {
             fontSize:
               "calc(12px + (13 - 12) * ((100vw - 300px) / (1600 - 300)))",

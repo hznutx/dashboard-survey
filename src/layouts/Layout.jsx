@@ -149,7 +149,7 @@ export default function PermanentDrawerLeft() {
           </ListItemButton>
         ))}
       </Drawer>
-      <Toolbar gutters={5} disablePadding />
+      <Toolbar gutters={5} />
       <Stack
         height="100vh"
         component="main"
@@ -158,7 +158,7 @@ export default function PermanentDrawerLeft() {
         sx={{
           display: "flex",
           flexGrow: 1,
-          padding: 5,
+          paddingX: 5,
           mt: 10,
           width: getOutletWidth(),
         }}

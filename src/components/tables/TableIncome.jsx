@@ -41,9 +41,9 @@ const rows = [
 export default function BasicTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 400 }} aria-label="simple table">
+      <Table>
         <TableHead>
-          <TableRow>
+          <TableRow style={{ color: "red" }}>
             <TableCell></TableCell>
             <TableCell>รายได้ส่วนบุคคล (บาท)</TableCell>
             <TableCell>รายได้ครัวเรือน (บาท)</TableCell>

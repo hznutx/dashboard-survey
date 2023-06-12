@@ -36,21 +36,6 @@ const data = {
 const options = {
   indexAxis: "y",
   plugins: {
-    tooltip: {
-      display: true,
-      callbacks: {
-        label: (context) => {
-          let label = context.datasets.data || [];
-          if (label) {
-            label += ": ";
-          }
-          if (context.parsed.y !== null) {
-            label += context.parsed.y.toLocaleString("th-TH") + " บาท";
-          }
-          return label;
-        },
-      },
-    },
     legend: {
       position: "top",
     },
