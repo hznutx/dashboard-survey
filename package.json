@@ -1,13 +1,16 @@
 {
   "name": "dashboard-survey",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "yarn run vite",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
+  },
+  "build": {
+    "chunkSizeWarningLimit": 530000
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
