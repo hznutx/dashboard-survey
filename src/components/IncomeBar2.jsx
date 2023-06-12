@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+// Rest of your code...
 
 const labels = [
   "เฉลี่ย",
@@ -25,25 +26,28 @@ const data = {
   labels,
   datasets: [
     {
-      data: [40600],
-      backgroundColor: "#c0c0c0",
+      label: "ค่าเฉลี่ยบุคคล 21,000 บาท",
+      data: [21000],
       barBorderRadius: 5,
-      stack: 0,
+      backgroundColor: "#cedddb",
+      stack: 1,
     },
     {
-      data: [0, 42700, 40900, 36900, 38700, 38800, 34600, 30900, 37500],
-      backgroundColor: "#81f5d0",
+      label: "รายได้ส่วนบุคคล (บาท)",
+      data: [0, 22000, 22400, 19600, 20300, 19500, 17900, 18000, 18200],
+      backgroundColor: "#f58181",
       barBorderRadius: 5,
-      stack: 0,
+      stack: 1,
     },
   ],
 };
-
 const options = {
   indexAxis: "y",
   plugins: {
-    Legend: { display: true, labels },
-    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
+    legend: {
+      position: "bottom",
+    },
+    title: { display: true, text: "รายได้ส่วนบุคคลแต่ละจังหวัด" },
   },
   responsive: true,
   interaction: {
@@ -52,7 +56,7 @@ const options = {
   },
   scales: {
     x: {
-      grid: { display: false, stacked: true },
+      grid: { display: true, stacked: true },
       ticks: {
         display: true,
         callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
@@ -73,7 +77,7 @@ ChartJS.register(
   Legend
 );
 
-export default function IncitizenBar(props) {
+export default function IncomeBar2(props) {
   return (
     <div>
       <Bar options={options} data={data} />

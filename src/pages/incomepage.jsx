@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import TableIncome from "../components/tables/TableIncome";
-import IncomeBar from "../components/IncomeBar";
-import IncomeHouseBar from "../components/IncomeHouseBar";
+import IncomeBar from "../components/IncomeBar2";
+import IncomeHouseBar from "../components/IncomeHouseBar2";
 
 const incomepage = () => {
   return (

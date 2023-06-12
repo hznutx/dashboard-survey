@@ -6,6 +6,9 @@ import Occupation from "./pages/Occupation";
 import Residentpage from "./pages/Residentpage";
 import Incomepage from "./pages/Incomepage";
 import Proposalpage from "./pages/Proposal";
+import Vihicles from "./pages/Vihicles";
+import SatisfyTrip from "./pages/SatisfyTrip";
+import Licent from "./pages/Licent";
 import Immigrationpage from "./pages/Immigration";
 import TripVolumn from "./pages/Tripvolumn";
 import TravelCostpage from "./pages/Travelcost";
@@ -30,6 +33,9 @@ const App = () => {
           <Route path="proposal" element={<Proposalpage />} />
           <Route path="travelcost" element={<TravelCostpage />} />
           <Route path="tripvolumn" element={<TripVolumn />} />
+          <Route path="vihicles" element={<Vihicles />} />
+          <Route path="licent" element={<Licent />} />
+          <Route path="satisfytrip" element={<SatisfyTrip />} />
         </Route>
       </Routes>
     </ThemeProvider>

@@ -28,32 +28,49 @@ const listLeftMenu = [
   { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
-  {
-    name: "ความสามารถในการเดินทาง",
-    icon: <Description />,
-    path: "/transportcapacity",
-  },
   { name: "รายได้", icon: <Description />, path: "/income" },
+  {
+    name: "การครอบครองรถแต่ละครัวเรือน",
+    icon: <Description />,
+    path: "/vihicles",
+  },
+  {
+    name: "ใบขับขี่",
+    icon: <Description />,
+    path: "/licent",
+  },
+
   {
     name: "ค่าใช้จ่ายในการเดินทาง",
     icon: <Description />,
     path: "/travelcost",
   },
   {
-    name: "กลุ่มวัตถุประสงค์การเดินทาง",
-    icon: <Description />,
-    path: "/proposal",
-  },
-  { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
-  { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
-  { name: "ใบขับขี่", icon: <Description />, path: "" },
-  { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
-  { name: "ความพึงพอใจในการเดินทาง", icon: <Description />, path: "" },
-  {
     name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
     icon: <Description />,
     path: "",
   },
+  {
+    name: "ความสามารถในการเดินทาง",
+    icon: <Description />,
+    path: "/transportcapacity",
+  },
+
+  {
+    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    icon: <Description />,
+    path: "/proposal",
+  },
+  {
+    name: "ความพึงพอใจในการเดินทาง",
+    icon: <Description />,
+    path: "/satisfytrip",
+  },
+
+  { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
+
+  { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
+
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },

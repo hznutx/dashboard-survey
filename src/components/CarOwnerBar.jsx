@@ -11,7 +11,6 @@ import {
 // Rest of your code...
 
 const labels = [
-  "เฉลี่ย",
   "กรุงเทพมหานคร",
   "นนทบุรี",
   "ปทุมธานี",
@@ -26,17 +25,31 @@ const data = {
   labels,
   datasets: [
     {
-      label: "ค่าเฉลี่ย 40,600 บาท",
-      data: [40600],
-      barBorderRadius: 5,
-      backgroundColor: "#c0c0c0",
+      label: "ไม่มีรถ",
+      data: [12, 8, 6, 6, 6, 4, 1, 4],
+      backgroundColor: "#dedede",
+      barBorderRadius: 2,
       stack: 1,
     },
     {
-      label: "รายได้ครัวเรือน (บาท)",
-      data: [0, 42700, 40900, 36900, 38700, 38800, 34600, 30900, 37500],
+      label: "จักรยานยนต์",
+      data: [27, 22, 22, 24, 24, 25, 31, 31],
       backgroundColor: "#81f5d0",
-      barBorderRadius: 5,
+      barBorderRadius: 2,
+      stack: 1,
+    },
+    {
+      label: "รถยนต์",
+      data: [30, 32, 27, 24, 23, 21, 25, 15],
+      backgroundColor: "#FF9551",
+      barBorderRadius: 2,
+      stack: 1,
+    },
+    {
+      label: "มีทั้งคู่",
+      data: [31, 38, 45, 46, 47, 50, 43, 50],
+      backgroundColor: "#FF4A4A",
+      barBorderRadius: 2,
       stack: 1,
     },
   ],
@@ -45,11 +58,12 @@ const options = {
   indexAxis: "y",
   plugins: {
     legend: {
-      position: "bottom",
+      position: "top",
     },
-    title: { display: true, text: "รายได้ครัวเรือนแต่ละจังหวัด" },
+    title: { display: true, text: "จำนวนการครอบครองรถ" },
   },
   responsive: true,
+  maintainAspectRatio: false,
   interaction: {
     mode: "index",
     intersect: false,
@@ -59,7 +73,7 @@ const options = {
       grid: { display: true, stacked: true },
       ticks: {
         display: true,
-        callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
+        callback: (value) => `${value}%`, // Add ',' sign to tick labels
       },
     },
     y: {
@@ -77,9 +91,9 @@ ChartJS.register(
   Legend
 );
 
-export default function IncomeHouseBar2(props) {
+export default function CarOwnerBar(props) {
   return (
-    <div>
+    <div style={{ height: "30vh", width: "40vws" }}>
       <Bar options={options} data={data} />
     </div>
   );
