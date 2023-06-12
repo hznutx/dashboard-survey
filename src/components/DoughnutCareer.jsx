@@ -32,7 +32,7 @@ const data = {
 
 const options = {
   responsive: true,
-  outerHeight: "200",
+  maintainAspectRatio: false, // Disable auto aspect ratio
   plugins: {
     legend: { position: "right" },
   },
@@ -56,7 +56,8 @@ export default function DoughnutChart(props) {
       className="canvas"
       style={{
         display: "inline-flex",
-        maxLines: 350,
+        width: 500,
+        height: 250,
       }}
     >
       <Doughnut data={data} options={options} />

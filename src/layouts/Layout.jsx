@@ -151,8 +151,9 @@ export default function PermanentDrawerLeft() {
       </Drawer>
       <Toolbar gutters={5} disablePadding />
       <Stack
+        height="100vh"
         component="main"
-        justifyContent={"center"}
+        // justifyContent={"center"}
         alignItems={"center"}
         sx={{
           display: "flex",

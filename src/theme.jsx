@@ -29,7 +29,7 @@ const theme = createTheme({
     h4: {
       fontSize: "45px",
     },
-    caption: { fontSize: "16px", fontWeight: "lighter" },
+    caption: { fontSize: "14px", fontWeight: "lighter" },
   },
   components: {
     MuiAppBar: {
