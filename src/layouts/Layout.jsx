@@ -23,7 +23,7 @@ const listLeftMenu = [
   {
     name: "สัดส่วนประชากรตามช่วงอายุและเพศ",
     icon: <Description />,
-    path: "/",
+    path: "/population",
   },
   { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
