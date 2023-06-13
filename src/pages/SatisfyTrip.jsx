@@ -1,10 +1,8 @@
 import { Box, Grid } from "@mui/material";
-import TableImmigration from "../components/tables/TableImmigration";
 import TransportCostBar from "../components/TransportCostBar";
 import ResultBar from "../components/SatisfyDistanceBar";
-import IncitizenBar from "../components/SatisfyTripBar";
 
-const immigration = () => {
+const SatisfyTrip = () => {
   return (
     <Grid
       container
@@ -29,4 +27,4 @@ const immigration = () => {
   );
 };
 
-export default immigration;
+export default SatisfyTrip;

@@ -3,7 +3,7 @@ import TableImmigration from "../components/tables/TableImmigration";
 import ResultBar from "../components/ImmigrationRefBar";
 import IncitizenBar from "../components/IncitizenBar";
 
-const immigration = () => {
+const Immigration = () => {
   return (
     <Grid container spacing={2} rowGap={5} justifyContent={"center"}>
       <Grid item xs={12} md={6}>
@@ -19,4 +19,4 @@ const immigration = () => {
   );
 };
 
-export default immigration;
+export default Immigration;

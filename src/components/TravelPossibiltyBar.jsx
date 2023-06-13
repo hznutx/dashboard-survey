@@ -73,7 +73,7 @@ ChartJS.register(
   Legend
 );
 
-export default function IncitizenBar(props) {
+export default function TravelPossibiltyBar(props) {
   return (
     <div>
       <Bar options={options} data={data} />

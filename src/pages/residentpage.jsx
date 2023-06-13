@@ -4,7 +4,7 @@ import ResidentBar from "../components/ResidentBar";
 
 import TableResident from "../components/tables/TableResident";
 
-const residentpage = () => {
+const Residentpage = () => {
   return (
     <Grid container spacing={4} rowGap={5}>
       <Grid item xs={12} md={3}>
@@ -20,4 +20,4 @@ const residentpage = () => {
   );
 };
 
-export default residentpage;
+export default Residentpage;

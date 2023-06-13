@@ -3,7 +3,7 @@ import TableProvince from "../components/tables/TableProvince";
 import TableProvince2 from "../components/tables/TableProvince2";
 import Middlezonepic from "../assets/images/transport-mid.png";
 
-const middlezone = () => {
+const Middlezone = () => {
   return (
     <Grid
       container
@@ -24,4 +24,4 @@ const middlezone = () => {
   );
 };
 
-export default middlezone;
+export default Middlezone;

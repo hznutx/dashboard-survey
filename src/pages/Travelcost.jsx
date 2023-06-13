@@ -1,10 +1,8 @@
-import { Box, Grid } from "@mui/material";
-import TableImmigration from "../components/tables/TableImmigration";
+import { Grid } from "@mui/material";
 import TransportCostBar from "../components/TransportCostBar";
 import ResultBar from "../components/ImmigrationRefBar";
-import IncitizenBar from "../components/IncitizenBar";
 
-const immigration = () => {
+const Travelcost = () => {
   return (
     <Grid
       container
@@ -29,4 +27,4 @@ const immigration = () => {
   );
 };
 
-export default immigration;
+export default Travelcost;

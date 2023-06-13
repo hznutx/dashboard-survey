@@ -4,7 +4,7 @@ import TableCarOwnerIncome from "../components/tables/TableCarOwnerIncome";
 import LicentOwner from "../components/DoughnutLicent";
 import LicentAgeBar from "../components/LicentAgeBar";
 
-const licent = () => {
+const Licent = () => {
   return (
     <Grid container spacing={4}>
       <Grid item xs={12}>
@@ -31,4 +31,4 @@ const licent = () => {
   );
 };
 //surveydashboard-demo
-export default licent;
+export default Licent;

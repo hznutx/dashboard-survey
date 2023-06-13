@@ -3,7 +3,7 @@ import TabelTripvolumn from "../components/tables/TableTripvolumn";
 import TabelTripresult from "../components/tables/TableTripresult";
 import TripvolumnPic from "../assets/images/clutertrip.jpg";
 
-const tripvolumn = () => {
+const Tripvolumn = () => {
   return (
     <Stack height="100vh">
       <Grid container spacing={2}>
@@ -21,4 +21,4 @@ const tripvolumn = () => {
   );
 };
 
-export default tripvolumn;
+export default Tripvolumn;

@@ -3,7 +3,7 @@ import TableIncome from "../components/tables/TableIncome";
 import IncomeBar from "../components/IncomeBar2";
 import IncomeHouseBar from "../components/IncomeHouseBar2";
 
-const incomepage = () => {
+const Incomepage = () => {
   return (
     <Grid container rowGap={3} spacing={3}>
       <Grid item xs={12}>
@@ -19,4 +19,4 @@ const incomepage = () => {
   );
 };
 
-export default incomepage;
+export default Incomepage;

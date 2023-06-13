@@ -25,7 +25,7 @@ const rows = [
   createData("เฉลี่ย", "97%", "1%", "1%", "100%"),
 ];
 
-export default function BasicTable() {
+export default function TableTravelPossibly() {
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">

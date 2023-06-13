@@ -1,12 +1,10 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import TableOccupation from "../components/tables/TableOccupation";
 import DoughnutCareer from "../components/DoughnutCareer";
-import TablePopulation from "../components/tables/TablePopulation";
-import TableIncome from "../components/tables/TableIncome";
 import IncomeBar from "../components/IncomeBar";
 import IncomeHouseBar from "../components/IncomeHouseBar";
 
-const occupation = () => {
+const Occupation = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>
@@ -30,4 +28,4 @@ const occupation = () => {
   );
 };
 
-export default occupation;
+export default Occupation;

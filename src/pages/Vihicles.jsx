@@ -4,7 +4,7 @@ import TableCarOwnerIncome from "../components/tables/TableCarOwnerIncome";
 import CarOwner from "../components/DoughnutCarOwner";
 import CarOwnerBar from "../components/CarOwnerBar";
 
-const vihicles = () => {
+const Vihicles = () => {
   return (
     <Grid container spacing={4}>
       <Grid item xs={12}>
@@ -33,4 +33,4 @@ const vihicles = () => {
   );
 };
 //surveydashboard-demo
-export default vihicles;
+export default Vihicles;
