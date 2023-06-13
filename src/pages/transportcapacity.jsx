@@ -2,7 +2,7 @@ import { Divider, Grid, Typography } from "@mui/material";
 import TableTravelPossibly from "../components/tables/TableTravelPossibly";
 import TravelPossibiltyBar from "../components/TravelPossibiltyBar";
 
-const transportcapacity = () => {
+const Transportcapacity = () => {
   return (
     <Grid container rowGap={5} justifyContent={"center"}>
       <Typography variant="h4">ความสามารถในการเดินทาง</Typography>
@@ -17,4 +17,4 @@ const transportcapacity = () => {
   );
 };
 
-export default transportcapacity;
+export default Transportcapacity;

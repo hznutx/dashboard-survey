@@ -1,3 +1,6 @@
+import Layout from "./layouts/Layout";
+import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
 import Capacitypage from "./pages/Transportcapacity";
 import Middlepage from "./pages/Middlezone";
 import Occupation from "./pages/Occupation";
@@ -11,9 +14,6 @@ import Immigrationpage from "./pages/Immigration";
 import TripVolumn from "./pages/Tripvolumn";
 import TravelCostpage from "./pages/Travelcost";
 import theme from "./theme.jsx";
-import Layout from "./layouts/Layout";
-import { Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "@emotion/react";
 import Populationpage from "./pages/population";
 
 const App = () => {
