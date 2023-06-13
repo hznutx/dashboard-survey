@@ -1,5 +1,3 @@
-import { ThemeProvider } from "@mui/material";
-import Populationpage from "./pages/Population";
 import Capacitypage from "./pages/Transportcapacity";
 import Middlepage from "./pages/Middlezone";
 import Occupation from "./pages/Occupation";
@@ -15,6 +13,8 @@ import TravelCostpage from "./pages/Travelcost";
 import theme from "./theme.jsx";
 import Layout from "./layouts/Layout";
 import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "@emotion/react";
+import Populationpage from "./pages/population";
 
 const App = () => {
   return (
@@ -23,7 +23,6 @@ const App = () => {
         {/* <Route path="/" element={<Intro />} /> */}
         <Route element={<Layout />}>
           <Route path="/" element={<Populationpage />} />
-          <Route path="population" element={<Populationpage />} />
           <Route path="immigration" element={<Immigrationpage />} />
           <Route path="transportcapacity" element={<Capacitypage />} />
           <Route path="resident" element={<Residentpage />} />

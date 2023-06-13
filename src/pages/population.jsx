@@ -4,7 +4,7 @@ import PopulationBar from "../components/PopulationBar";
 import GenderBar from "../components/GenderBar";
 import GenderResult from "../components/GenderResultBar";
 
-const population = () => {
+const Populationpage = () => {
   return (
     <Grid container rowGap={5} spacing={3}>
       <Grid item xs={12} lg={7}>
@@ -23,4 +23,4 @@ const population = () => {
   );
 };
 //surveydashboard-demo
-export default population;
+export default Populationpage;
