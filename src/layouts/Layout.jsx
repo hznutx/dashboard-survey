@@ -9,7 +9,6 @@ import {
   Drawer,
   ListItem,
   ListItemButton,
-  Stack,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -23,63 +22,41 @@ const listLeftMenu = [
   {
     name: "สัดส่วนประชากรตามช่วงอายุและเพศ",
     icon: <Description />,
-    path: "/",
+    path: "/population",
   },
-  { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
+  {
+    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    icon: <Description />,
+    path: "/proposal",
+  },
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
-  { name: "รายได้", icon: <Description />, path: "/income" },
+  { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
+  { name: "รายได้", icon: <Description />, path: "" },
   {
-    name: "การครอบครองรถแต่ละครัวเรือน",
+    name: "ปริมาณการเดินทางข้ามจังหวัด",
     icon: <Description />,
-    path: "/vihicles",
-  },
-  {
-    name: "ใบขับขี่",
-    icon: <Description />,
-    path: "/licent",
-  },
-
-  {
-    name: "ค่าใช้จ่ายในการเดินทาง",
-    icon: <Description />,
-    path: "/travelcost",
-  },
-  {
-    name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
-    icon: <Description />,
-    path: "",
+    path: "/tripvolumn",
   },
   {
     name: "ความสามารถในการเดินทาง",
     icon: <Description />,
     path: "/transportcapacity",
   },
-
-  {
-    name: "กลุ่มวัตถุประสงค์การเดินทาง",
-    icon: <Description />,
-    path: "/proposal",
-  },
-  {
-    name: "ความพึงพอใจในการเดินทาง",
-    icon: <Description />,
-    path: "/satisfytrip",
-  },
-
-  { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
-
+  { name: "ประชากรแฝง", icon: <Description />, path: "" },
+  { name: "การครอบครองรถแต่ละครัวเรือน", icon: <Description />, path: "" },
+  { name: "ใบขับขี่", icon: <Description />, path: "" },
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
-
+  { name: "ความพึงพอใจในการเดินทาง", icon: <Description />, path: "" },
+  {
+    name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
+    icon: <Description />,
+    path: "",
+  },
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
   { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
-
-  {
-    name: "ปริมาณการเดินทางข้ามจังหวัด",
-    icon: <Description />,
-    path: "/tripvolumn",
-  },
+  { name: "ค่าใช้จ่ายในการเดินทาง", icon: <Description />, path: "" },
 ];
 
 export default function PermanentDrawerLeft() {
@@ -89,7 +66,7 @@ export default function PermanentDrawerLeft() {
   const isLandscapeTablet = useMediaQuery(
     "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)"
   );
-  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleMenuIconClick = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -122,7 +99,7 @@ export default function PermanentDrawerLeft() {
         position="fixed"
         sx={{
           zIndex: 1,
-          display: { xs: "flex", lg: "none" },
+          display: { xs: "flex", md: "none" },
         }}
       >
         <Toolbar>
@@ -166,22 +143,20 @@ export default function PermanentDrawerLeft() {
           </ListItemButton>
         ))}
       </Drawer>
-      <Toolbar gutters={5} />
-      <Stack
-        height="100vh"
+      <Toolbar />
+      <Box
         component="main"
-        // justifyContent={"center"}
+        justifyContent={"center"}
         alignItems={"center"}
         sx={{
           display: "flex",
           flexGrow: 1,
-          paddingX: 5,
-          mt: 10,
+          p: 3,
           width: getOutletWidth(),
         }}
       >
         <Outlet />
-      </Stack>
+      </Box>
     </Box>
   );
 }

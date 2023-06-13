@@ -8,6 +8,7 @@
   width: 5px;
 }
 
+ 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #c0f1e4;
@@ -15,5 +16,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #c0f1e4;
+  background: #c0f1e4; 
 }

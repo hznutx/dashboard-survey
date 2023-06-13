@@ -10,17 +10,17 @@ const population = () => {
       <Grid item xs={12} md={6}>
         <GenderBar />
       </Grid>
-      <Grid item xs={12} lg={5}>
+      <Grid item xs={12} md={6}>
         <GenderResult />
       </Grid>
-      <Grid item xs={12} lg={6}>
-        <GenderBar />
+      <Grid item xs={12} md={10} lg={6}>
+        <TablePopulation />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid item xs={12} md={10} lg={6}>
         <PopulationBar />
       </Grid>
     </Grid>
   );
 };
-//surveydashboard-demo
+
 export default population;
