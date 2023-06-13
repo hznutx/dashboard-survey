@@ -23,7 +23,7 @@ const data = {
     },
     {
       label: "ต้องมีอุปกรณ์หรือผู้ช่วยเหลือ",
-      data: [1, 9, 0, 0],
+      data: [2, 8, 0, 0],
       backgroundColor: "rgba(75, 192, 192, 0.5)",
       stack: 1,
     },

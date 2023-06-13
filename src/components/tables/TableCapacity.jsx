@@ -35,113 +35,51 @@ function createData(
 }
 
 const rows = [
+  createData("รถยนต์", "46%", "57%", "57%", "46%", "56%", "51%", "50%", "44%"),
   createData(
-    "กรุงเทพมหานคร",
-    "48.2%",
-    "2.00%",
-    "1.15%",
-    "2.20%",
-    "0.91%",
-    "0.38%",
-    "0.03%",
-    "0.05%",
-    "0.18%"
+    "รถจักรยานยนต์",
+    "30%",
+    "30%",
+    "32%",
+    "34%",
+    "33%",
+    "42%",
+    "39%",
+    "45%"
+  ),
+  createData("รถสาธารณะ", "14.2%", "8%", "5%", "8%", "5%", "3%", "3%", "2%"),
+  createData(
+    "Taxi / Grab /วิน",
+    "5.8%",
+    "4%",
+    "2%",
+    "4%",
+    "4%",
+    "1%",
+    "2%",
+    "1%"
   ),
   createData(
-    "นนทบุรี",
-    "2.01%",
-    "7.3%",
-    "0.26%",
-    "0.03%",
-    "0.04%",
-    "0.06%",
-    "0.01%",
-    "0.00%",
-    "0.06%"
+    "อื่นๆ เช่น รถรับส่ง",
+    "3.4%",
+    "2%",
+    "4%",
+    "5%",
+    "2%",
+    "2%",
+    "6%",
+    "8%"
   ),
   createData(
-    "ปทุมธานี",
-    "1.15%",
-    "0.26%",
-    "7.0%",
-    "0.03%",
-    "0.01%",
-    "0.01%",
-    "0.10%	",
-    "0.00%",
-    "0.09%"
-  ),
-  createData(
-    "สมุทรปราการ",
-    "2.21%",
-    "0.03%",
-    "0.03%",
-    "9.6%",
-    "0.03%",
-    "0.01%",
-    "0.00%",
-    "0.01%",
-    "0.14%"
-  ),
-  createData(
-    "สมุทรสาคร",
-    "0.91%	",
-    "0.04%	",
-    "0.01%",
-    "0.03%",
-    "4.3%",
-    "0.22%",
-    "0.00%",
-    "0.00%",
-    "0.13%"
-  ),
-  createData(
-    "นครปฐม",
-    "0.38%",
-    "0.06%",
-    "0.01%",
-    "0.01%",
-    "0.22%",
-    "4.4%",
-    "0.00%",
-    "0.00%",
-    "0.13%"
-  ),
-  createData(
-    "พระนครศรีอยุธยา",
-    "0.03%",
-    "0.01%",
-    "0.10%",
-    "0.00%",
-    "0.00%",
-    "0.00%",
-    "1.3%",
-    "0.00%",
-    "0.13%"
-  ),
-  createData(
-    "ฉะเชิงเทรา",
-    "0.05%",
-    "0.00%",
-    "0.00%",
-    "0.01%",
-    "0.00%",
-    "0.00%",
-    "0.00%",
-    "1.0%",
-    "0.09%"
-  ),
-  createData(
-    "นอกพื้นที่ศึกษา",
-    "0.16%",
-    "0.05%",
-    "0.09%",
-    "0.14%",
-    "0.13%",
-    "0.13%",
-    "0.13%",
-    "0.09%",
-    "0.0%"
+    "",
+    "100%",
+    "100%",
+    "100%",
+    "100%",
+    "100%",
+    "100%",
+    "100%",
+    "100%"
   ),
 ];
 
@@ -151,12 +89,15 @@ export default function BasicTable() {
       <Table sx={{ minWidth: 400 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell></TableCell>
-            <TableCell align="right">กรุงเทพมหานคร</TableCell>
-            <TableCell align="right">นนทบุรี</TableCell>
-            <TableCell align="right">ปทุมธานี</TableCell>
-            <TableCell align="right">สมุทรปราการ</TableCell>
-            <TableCell align="right">สมุทรสาคร</TableCell>
+            <TableCell style={{ fontSize: 14 }}></TableCell>
+            <TableCell style={{ fontSize: 14 }}>กรุงเทพมหานคร</TableCell>
+            <TableCell style={{ fontSize: 14 }}>นนทบุรี</TableCell>
+            <TableCell style={{ fontSize: 14 }}>ปทุมธานี</TableCell>
+            <TableCell style={{ fontSize: 14 }}>สมุทรปราการ</TableCell>
+            <TableCell style={{ fontSize: 14 }}>สมุทรสาคร</TableCell>
+            <TableCell style={{ fontSize: 14 }}>นครปฐม</TableCell>
+            <TableCell style={{ fontSize: 14 }}>พระนครศรีอยุธยา</TableCell>
+            <TableCell style={{ fontSize: 14 }}>ฉะเชิงเทรา</TableCell>
           </TableRow>
         </TableHead>
         <TableBody
@@ -169,14 +110,22 @@ export default function BasicTable() {
         >
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
+              <TableCell
+                style={{ fontSize: 14 }}
+                sx={{ textAlign: "left", paddingLeft: 2 }}
+                component="th"
+                scope="row"
+              >
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.bkk}</TableCell>
-              <TableCell align="right">{row.nontaburi}</TableCell>
-              <TableCell align="right">{row.pathum}</TableCell>
-              <TableCell align="right">{row.samutprakan}</TableCell>
-              <TableCell align="right">{row.samutsakorn}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.bkk}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.nontaburi}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.pathum}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.samutprakan}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.samutsakorn}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.nakornpathom}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.ayuttaya}</TableCell>
+              <TableCell style={{ fontSize: 14 }}>{row.chachengsow}</TableCell>
             </TableRow>
           ))}
         </TableBody>

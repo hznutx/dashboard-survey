@@ -1,4 +1,3 @@
-import "@fontsource/kanit";
 import React, { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import {
@@ -23,7 +22,7 @@ const listLeftMenu = [
   {
     name: "สัดส่วนประชากรตามช่วงอายุและเพศ",
     icon: <Description />,
-    path: "/population",
+    path: "/",
   },
   { name: "ประชากรแฝง", icon: <Description />, path: "/immigration" },
   { name: "ลักษณะที่พัก", icon: <Description />, path: "/resident" },
@@ -45,6 +44,12 @@ const listLeftMenu = [
     icon: <Description />,
     path: "/travelcost",
   },
+  { name: "รูปแบบการเดินทาง", icon: <Description />, path: "/travelchoice" },
+  {
+    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    icon: <Description />,
+    path: "/proposal",
+  },
   {
     name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
     icon: <Description />,
@@ -53,14 +58,9 @@ const listLeftMenu = [
   {
     name: "ความสามารถในการเดินทาง",
     icon: <Description />,
-    path: "",
+    path: "/capacity",
   },
-
-  {
-    name: "กลุ่มวัตถุประสงค์การเดินทาง",
-    icon: <Description />,
-    path: "/proposal",
-  },
+  { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "/timing" },
   {
     name: "ความพึงพอใจในการเดินทาง",
     icon: <Description />,
@@ -72,8 +72,6 @@ const listLeftMenu = [
   { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
 
   { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
-  { name: "รูปแบบการเดินทาง", icon: <Description />, path: "" },
-  { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "" },
 
   {
     name: "ปริมาณการเดินทางข้ามจังหวัด",

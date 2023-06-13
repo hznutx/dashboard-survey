@@ -132,8 +132,8 @@ export default function BasicTable() {
             <StyledTableCell>สมุทรปราการ</StyledTableCell>
             <StyledTableCell>สมุทรสาคร</StyledTableCell>
             <StyledTableCell>นครปฐม</StyledTableCell>
-            <StyledTableCell>พระนครศรีอยุธยา</StyledTableCell>
             <StyledTableCell>ฉะเชิงเทรา</StyledTableCell>
+            <StyledTableCell>พระนครศรีอยุธยา</StyledTableCell>
             <StyledTableCell></StyledTableCell>
           </TableRow>
         </TableHead>

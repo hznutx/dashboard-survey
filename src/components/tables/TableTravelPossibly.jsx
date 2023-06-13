@@ -22,7 +22,7 @@ const rows = [
   createData("น้อยกว่า 22 ปี", "97%", "0%", "3%", "100%"),
   createData("22-60 ปี", "99%", "0%", "1%", "100%"),
   createData("60 ปีขึ้นไป", "86%", "9%", "6%", "100%"),
-  createData("เฉลี่ย", "97%", "1%", "1%", "100%"),
+  createData("เฉลี่ย", "97%", "2%", "1%", "100%"),
 ];
 
 export default function TableTravelPossibly() {

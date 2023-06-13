@@ -12,42 +12,39 @@ import {
 
 const labels = [
   "เฉลี่ย",
-  "รถยนต์",
-  "จักรยานยนต์",
-  "Taxi / Grab",
-  "จักรยานยนต์รับจ้าง",
-  "รถไฟฟ้า",
-  "รถเมล์",
-  "สองแถว",
-  "รถตู้",
+  "กรุงเทพมหานคร",
+  "นนทบุรี",
+  "ปทุมธานี",
+  "สมุทรปราการ",
+  "สมุทรสาคร",
+  "นครปฐม",
+  "ฉะเชิงเทรา",
+  "พระนครศรีอยุธยา",
 ];
 
 const data = {
   labels,
   datasets: [
     {
-      label: "พ.ศ. 2565",
-      data: [36, 55, 12, 97, 27, 45, 42, 18, 9, 30],
-      backgroundColor: "#00bdce",
+      label: "ค่าเดินทางเฉลี่ย",
+      data: [36],
+      backgroundColor: "#81f5d0",
       barBorderRadius: 0,
       stack: 0,
     },
     {
-      label: "พ.ศ. 2560",
-      data: [32, 39, 43, 39, 44, 37, 33, 27],
+      label: "ค่าเดินทางแต่ละจังหวัด",
+      data: [0, 32, 39, 43, 39, 44, 37, 33, 27],
       backgroundColor: "#dedede",
       barBorderRadius: 0,
-      stack: 1,
+      stack: 0,
     },
   ],
 };
 const options = {
   indexAxis: "y",
   plugins: {
-    title: {
-      display: true,
-      text: "ค่าใช้จ่ายเฉลี่ย (บาท/เที่ยว) แต่ละรูปแบบการเดินทาง",
-    },
+    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
   },
   responsive: true,
   interaction: {
@@ -77,10 +74,6 @@ ChartJS.register(
   Legend
 );
 
-export default function TransportCostBar(props) {
-  return (
-    <div>
-      <Bar options={options} data={data} />
-    </div>
-  );
+export default function IncitizenBar(props) {
+  return <Bar options={options} data={data} />;
 }

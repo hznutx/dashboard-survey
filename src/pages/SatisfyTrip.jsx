@@ -1,6 +1,6 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import TransportCostBar from "../components/TransportCostBar";
-import ResultBar from "../components/SatisfyDistanceBar";
+import CarTypeRadar from "../components/CartypeRadarChart";
 
 const SatisfyTrip = () => {
   return (
@@ -12,7 +12,7 @@ const SatisfyTrip = () => {
       justifyContent={"center"}
     >
       <Grid item xs={12} lg={6}>
-        <ResultBar />
+        <CarTypeRadar />
       </Grid>
       <Grid item xs={12} md={10} lg={6}>
         <TransportCostBar />

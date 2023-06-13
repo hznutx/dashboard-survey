@@ -1,14 +1,6 @@
 import "@fontsource/kanit";
 import { createTheme } from "@mui/material";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { Chart as ChartJS } from "chart.js";
 
 // Set the default font family
 ChartJS.defaults.font.family = "'Kanit'";

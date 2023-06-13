@@ -46,31 +46,31 @@ const data = {
     },
     {
       label: "31-40 ปี",
-      data: [25, 25, 25, 24, 26, 25, 24, 30, 24],
+      data: [25, 22, 22, 24, 26, 25, 24, 30, 24],
       backgroundColor: "rgb(235, 135, 53)",
       stack: "Stack 0",
     },
     {
       label: "41-50 ปี",
-      data: [21, 20, 21, 22, 20, 22, 22, 20, 22],
+      data: [21, 20, 23, 22, 20, 20, 22, 20, 22],
       backgroundColor: "rgb(250, 226, 131)",
       stack: "Stack 0",
     },
     {
       label: "51-60 ปี",
-      data: [14, 14, 15, 15, 14, 15, 16, 12, 16],
+      data: [14, 14, 15, 15, 14, 17, 16, 13, 16],
       backgroundColor: "rgb(154, 51, 66)",
       stack: "Stack 0",
     },
     {
       label: "61-70 ปี",
-      data: [10, 9, 12, 12, 11, 9, 11, 11, 11],
+      data: [10, 10, 12, 12, 11, 9, 11, 11, 11],
       backgroundColor: "rgb(246, 152, 191)",
       stack: "Stack 0",
     },
     {
       label: "71-80 ปี",
-      data: [3, 3, 3, 3, 3, 3, 3, 2, 3],
+      data: [3, 4, 3, 3, 3, 3, 3, 2, 3],
       backgroundColor: "rgb(154, 110, 110)",
       stack: "Stack 0",
     },
@@ -124,7 +124,7 @@ ChartJS.register(
 
 export default function GenderBar(props) {
   return (
-    <div className="canvas" style={{ fontFamily: "kanit" }}>
+    <div className="canvas">
       <Bar options={options} data={data} />
     </div>
   );

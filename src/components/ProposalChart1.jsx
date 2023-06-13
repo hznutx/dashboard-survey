@@ -1,25 +1,33 @@
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
-  labels: ["HBO", "NHB", "HBE", "HBW"],
+  labels: ["DISNEY+", "VIU", "YOUTUBE", "LINE TV"],
   datasets: [
     {
       label: "# of Votes",
-      data: [52.9, 3.9, 38.4, 4.8],
+      data: [10, 20, 30, 40],
       backgroundColor: [
-        "rgba(99, 147, 179, 0.5)",
-        "rgba(86, 255, 238, 0.5)",
-        "rgba(255, 99, 132, 0.5)",
-        "rgba(255, 219, 183, 0.5)",
+        "rgb(0, 111, 185)",
+        "rgba(255, 214, 10, 0.95)",
+        "rgb(207, 54, 54)",
+        "rgb(112, 255, 16)",
       ],
       borderWidth: 1,
     },
   ],
 };
 
+const options = {
+  responsive: true,
+  maintainAspectRatio: false, // Disable auto aspect ratio
+  plugins: {
+    legend: { position: "right" },
+  },
+};
+
 export default function ProposalChart1(props) {
-  return <Pie data={data} />;
+  return <Doughnut data={data} options={options} />;
 }
