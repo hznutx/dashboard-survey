@@ -53,7 +53,7 @@ const listLeftMenu = [
   {
     name: "ความสามารถในการเดินทาง",
     icon: <Description />,
-    path: "/transportcapacity",
+    path: "",
   },
 
   {

@@ -1,7 +1,6 @@
 import Layout from "./layouts/Layout";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
-import Capacitypage from "./pages/Transportcapacity";
 import Middlepage from "./pages/Middlezone";
 import Occupation from "./pages/Occupation";
 import Residentpage from "./pages/Residentpage";
@@ -24,7 +23,6 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Populationpage />} />
           <Route path="immigration" element={<Immigrationpage />} />
-          <Route path="transportcapacity" element={<Capacitypage />} />
           <Route path="resident" element={<Residentpage />} />
           <Route path="income" element={<Incomepage />} />
           <Route path="occupation" element={<Occupation />} />
