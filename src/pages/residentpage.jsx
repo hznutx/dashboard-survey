@@ -1,24 +1,20 @@
-import { Box, Grid, Stack } from "@mui/material";
-import TablePopulation from "../components/tables/TablePopulation";
+import { Grid } from "@mui/material";
 import ResidentChart from "../components/ResidentChart";
+import ResidentBar from "../components/ResidentBar";
 
-import TableCapacity from "../components/tables/TableCapacity";
-import DoughnutCareer from "../components/DoughnutCareer";
+import TableResident from "../components/tables/TableResident";
 
 const residentpage = () => {
   return (
-    <Grid container spacing={3} rowGap={10} justifyContent={"center"}>
-      <Grid item xs={12} md={8}>
-        <TablePopulation />
-      </Grid>
-      <Grid item xs={6} md={3}>
+    <Grid container spacing={4} rowGap={5}>
+      <Grid item xs={12} md={3}>
         <ResidentChart />
       </Grid>
       <Grid item xs>
-        <TableCapacity />
+        <TableResident />
       </Grid>
-      <Grid item xs={12} md={4}>
-        <DoughnutCareer />
+      <Grid item xs={6}>
+        <ResidentBar />
       </Grid>
     </Grid>
   );

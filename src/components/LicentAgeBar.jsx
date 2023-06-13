@@ -10,27 +10,33 @@ import {
   Legend,
 } from "chart.js";
 
-const labels = ["ประชากร"];
+const labels = ["> 60 ปี", "22-60 ปี", "< 22 ปี"];
 
 const data = {
   labels,
   datasets: [
     {
-      label: "วัยเรียน 9.1%",
-      data: [9.1],
-      backgroundColor: "rgb(75, 192, 192)",
+      label: "ไม่มีใบขับขี่",
+      data: [55, 18, 82],
+      backgroundColor: "#F34573",
       stack: "Stack 0",
     },
     {
-      label: "วัยทำงาน 77.0%",
-      data: [77],
-      backgroundColor: "rgb(198, 198, 198)",
+      label: "จักรยานยนต์",
+      backgroundColor: "#81f5d0",
+      data: [8, 23, 14],
       stack: "Stack 0",
     },
     {
-      label: "วัยสูงอายุ 13.9%",
-      data: [13.9],
-      backgroundColor: "rgb(255, 204, 84)",
+      label: "รถยนต์",
+      data: [22, 29, 2],
+      backgroundColor: "#D7F7F5",
+      stack: "Stack 0",
+    },
+    {
+      label: "มีทั้งคู่",
+      data: [15, 30, 2],
+      backgroundColor: "#2A6171",
       stack: "Stack 0",
     },
   ],
@@ -41,7 +47,7 @@ const options = {
   plugins: {
     title: {
       display: true,
-      text: "สัดส่วนประชากรตามช่วงอายุ",
+      text: "อายุกับการครอบครองใบขับขี่",
     },
   },
   responsive: true,
@@ -73,7 +79,7 @@ ChartJS.register(
   Legend
 );
 
-export default function GenderBar(props) {
+export default function LicentOwnerBar(props) {
   return (
     <div>
       <Bar options={options} data={data} />

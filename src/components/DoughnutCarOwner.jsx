@@ -14,18 +14,17 @@ import {
 
 const data = {
   labels: [
-    "นักเรียน/นักศึกษา",
-    "ทำงานประจำนอกบ้าน",
-    "ทำงานที่บ้าน/อาชีพอิสระ",
-    "ทำงานเกี่ยวกับการขนส่ง",
-    "ไม่ได้ทำงาน/แม่บ้าน",
+    "มีทั้งรถและจักรยานยนต์ 37.2%",
+    "ไม่มีรถ 8.9%",
+    "มีจักรยานยนต์ 25.5%",
+    "มีรถยนต์ 37.2%",
   ],
   datasets: [
     {
       label: "จำนวนรถ",
-      data: [9.8, 41.0, 31.5, 0.7, 17.0],
-      backgroundColor: ["#F69D9D", "#46C2CB", "#d6e8ea", "#F2F7A1", "#E5BEEC"],
-      borderWidth: 0,
+      data: [37.2, 8.9, 25.5, 28.4],
+      backgroundColor: ["#FF4A4A", "#dedede", "#81f5d0", "#FF9551"],
+      borderWidth: 1,
     },
   ],
 };
@@ -55,9 +54,8 @@ export default function DoughnutChart(props) {
     <div
       className="canvas"
       style={{
-        display: "flex",
-        flexWrap: "wrap",
-        width: 500,
+        display: "inline-flex",
+        width: 510,
         height: 300,
       }}
     >

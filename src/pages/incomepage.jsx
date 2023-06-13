@@ -1,20 +1,21 @@
-import { Divider, Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import TableIncome from "../components/tables/TableIncome";
-import DoughnutCareer from "../components/DoughnutCareer";
+import IncomeBar from "../components/IncomeBar2";
+import IncomeHouseBar from "../components/IncomeHouseBar2";
 
 const incomepage = () => {
   return (
-    <Stack height="100vh" >
-      <Grid container rowGap={12} >
-        <Grid item xs={12}>
-          <TableIncome />
-          <Divider />
-        </Grid>
-        <Grid item xs={12}>
-          {/* <DoughnutCareer /> */}
-        </Grid>
+    <Grid container rowGap={3} spacing={3}>
+      <Grid item xs={12}>
+        <TableIncome />
       </Grid>
-    </Stack>
+      <Grid item xs={12} lg={6}>
+        <IncomeHouseBar />
+      </Grid>
+      <Grid item xs={12} lg={6}>
+        <IncomeBar />
+      </Grid>
+    </Grid>
   );
 };
 

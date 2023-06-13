@@ -152,15 +152,11 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell></TableCell>
-            <TableCell style={{ fontSize: 14 }}>กรุงเทพมหานคร</TableCell>
-            <TableCell style={{ fontSize: 14 }}>นนทบุรี</TableCell>
-            <TableCell style={{ fontSize: 14 }}>ปทุมธานี</TableCell>
-            <TableCell style={{ fontSize: 14 }}>สมุทรปราการ</TableCell>
-            <TableCell style={{ fontSize: 14 }}>สมุทรสาคร</TableCell>
-            <TableCell style={{ fontSize: 14 }}>นครปฐม</TableCell>
-            <TableCell style={{ fontSize: 14 }}>พระนครศรีอยุธยา</TableCell>
-            <TableCell style={{ fontSize: 14 }}>ฉะเชิงเทรา</TableCell>
-            <TableCell style={{ fontSize: 14 }}>นอกพื้นที่ศึกษา</TableCell>
+            <TableCell align="right">กรุงเทพมหานคร</TableCell>
+            <TableCell align="right">นนทบุรี</TableCell>
+            <TableCell align="right">ปทุมธานี</TableCell>
+            <TableCell align="right">สมุทรปราการ</TableCell>
+            <TableCell align="right">สมุทรสาคร</TableCell>
           </TableRow>
         </TableHead>
         <TableBody
@@ -173,18 +169,14 @@ export default function BasicTable() {
         >
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell style={{ fontSize: 14 }} component="th" scope="row">
+              <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.bkk}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.nontaburi}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.pathum}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.samutprakan}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.samutsakorn}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.nakornpathom}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.ayuttaya}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.chachengsow}</TableCell>
-              <TableCell style={{ fontSize: 14 }}>{row.outspace}</TableCell>
+              <TableCell align="right">{row.bkk}</TableCell>
+              <TableCell align="right">{row.nontaburi}</TableCell>
+              <TableCell align="right">{row.pathum}</TableCell>
+              <TableCell align="right">{row.samutprakan}</TableCell>
+              <TableCell align="right">{row.samutsakorn}</TableCell>
             </TableRow>
           ))}
         </TableBody>

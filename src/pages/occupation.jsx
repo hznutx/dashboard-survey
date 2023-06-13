@@ -1,24 +1,30 @@
-import { Divider, Grid, Stack } from "@mui/material";
-import TableCapacity from "../components/tables/TableCapacity";
+import { Box, Grid, Typography } from "@mui/material";
+import TableOccupation from "../components/tables/TableOccupation";
 import DoughnutCareer from "../components/DoughnutCareer";
 import TablePopulation from "../components/tables/TablePopulation";
-import ProposalChart1 from "../components/ProposalChart1";
+import TableIncome from "../components/tables/TableIncome";
+import IncomeBar from "../components/IncomeBar";
+import IncomeHouseBar from "../components/IncomeHouseBar";
 
 const occupation = () => {
   return (
-    <Grid container gap={5}>
-      <Grid item xs>
-        <TableCapacity />
-        <Divider />
+    <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <Typography variant="h5" mb={4}>
+          สำรวจอาชีพจำนวนประชากรทั้งหมด
+        </Typography>
       </Grid>
-      <Grid item xs={12} xl={4}>
+      <Grid item xs={5}>
         <DoughnutCareer />
       </Grid>
-      <Grid item xs={12} md={8}>
-        <TablePopulation />
+      <Grid item xs={6}>
+        <TableOccupation />
       </Grid>
-      <Grid item xs={8} md={3}>
-        <ProposalChart1 />
+      <Grid item xs>
+        <IncomeBar />
+      </Grid>
+      <Grid item xs>
+        <IncomeHouseBar />
       </Grid>
     </Grid>
   );

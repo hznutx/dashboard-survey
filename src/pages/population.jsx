@@ -6,21 +6,21 @@ import GenderResult from "../components/GenderResultBar";
 
 const population = () => {
   return (
-    <Grid container spacing={2} rowGap={5} alignItems={"center"}>
-      <Grid item xs={12} md={6}>
-        <GenderBar />
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <GenderResult />
-      </Grid>
-      <Grid item xs={12} md={10} lg={6}>
+    <Grid container rowGap={5} spacing={3}>
+      <Grid item xs={12} lg={7}>
         <TablePopulation />
       </Grid>
-      <Grid item xs={12} md={10} lg={6}>
+      <Grid item xs={12} lg={5}>
+        <GenderResult />
+      </Grid>
+      <Grid item xs={12} lg={6}>
+        <GenderBar />
+      </Grid>
+      <Grid item xs={12} lg={6}>
         <PopulationBar />
       </Grid>
     </Grid>
   );
 };
-
+//surveydashboard-demo
 export default population;

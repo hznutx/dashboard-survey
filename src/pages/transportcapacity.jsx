@@ -1,17 +1,19 @@
-import { Divider, Grid, Stack } from "@mui/material";
-import TableCapacity from "../components/tables/TableCapacity";
+import { Divider, Grid, Typography } from "@mui/material";
+import TableTravelPossibly from "../components/tables/TableTravelPossibly";
+import TravelPossibiltyBar from "../components/TravelPossibiltyBar";
 
 const transportcapacity = () => {
   return (
-    <Stack height="100vh">
-      <Grid container>
-        <Grid item xs>
-          <TableCapacity />
-          <Divider />
-        </Grid>
-        <Grid item xl={5}></Grid>
+    <Grid container rowGap={5} justifyContent={"center"}>
+      <Typography variant="h4">ความสามารถในการเดินทาง</Typography>
+      <Grid item xs={12} md={8}>
+        <TravelPossibiltyBar />
+        <Divider />
       </Grid>
-    </Stack>
+      <Grid item xs={12}>
+        <TableTravelPossibly />
+      </Grid>
+    </Grid>
   );
 };
 
