@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import TableCarLicent from "../components/tables/TableCarLicent";
-import TableCarOwnerIncome from "../components/tables/TableCarOwnerIncome";
 import LicentOwner from "../components/DoughnutLicent";
 import LicentAgeBar from "../components/LicentAgeBar";
 
