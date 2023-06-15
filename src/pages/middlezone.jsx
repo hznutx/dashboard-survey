@@ -5,20 +5,15 @@ import Middlezonepic from "../assets/images/transport-mid.png";
 
 const Middlezone = () => {
   return (
-    <Grid
-      container
-      display="flex"
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
-      <Grid item xs={12} lg={6}>
+    <Grid container rowGap={4} justifyContent={"center"}>
+      <Grid item xs={12} lg={8}>
         <img src={Middlezonepic} width="100%" />
       </Grid>
-      <Grid item xs={12} lg={6}>
-        <TableProvince />
+      <Grid item xs={12}>
+        <TableProvince2 />
       </Grid>
       <Grid item xs>
-        <TableProvince2 />
+        <TableProvince />
       </Grid>
     </Grid>
   );

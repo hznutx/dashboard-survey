@@ -29,38 +29,42 @@ const listLeftMenu = [
   { name: "อาชีพ", icon: <Description />, path: "/occupation" },
   { name: "รายได้", icon: <Description />, path: "/income" },
   {
-    name: "การครอบครองรถแต่ละครัวเรือน",
-    icon: <Description />,
-    path: "/vihicles",
-  },
-  {
-    name: "ใบขับขี่",
-    icon: <Description />,
-    path: "/licent",
-  },
-
-  {
     name: "ค่าใช้จ่ายในการเดินทาง",
     icon: <Description />,
     path: "/travelcost",
   },
+  {
+    name: "การครอบครองรถแต่ละครัวเรือน",
+    icon: <Description />,
+    path: "/vihicles",
+  },
+  { name: "ใบขับขี่", icon: <Description />, path: "/licent" },
   { name: "รูปแบบการเดินทาง", icon: <Description />, path: "/travelchoice" },
   {
-    name: "กลุ่มวัตถุประสงค์การเดินทาง",
+    name: "วัตถุประสงค์การเดินทางแต่ละกลุ่มอายุ",
     icon: <Description />,
-    path: "/proposal",
+    path: "/purpose",
   },
   {
-    name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
+    name: "การกระจายช่วงเวลาการออกเดินทาง",
     icon: <Description />,
-    path: "",
+    path: "/travelspread",
+  },
+  // {
+  //   name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
+  //   icon: <Description />,
+  //   path: "/travelrenge",
+  // },
+  {
+    name: "ระยะทางและความเร็วที่ใช้ในการเดินทาง",
+    icon: <Description />,
+    path: "/velocity",
   },
   {
-    name: "ความสามารถในการเดินทาง",
+    name: "ระยะเวลาที่ใช้ในการเดินทาง",
     icon: <Description />,
-    path: "/capacity",
+    path: "/timing",
   },
-  { name: "เวลาที่ใช้ในการเดินทาง", icon: <Description />, path: "/timing" },
   {
     name: "ความพึงพอใจในการเดินทาง",
     icon: <Description />,
@@ -69,9 +73,11 @@ const listLeftMenu = [
 
   { name: "ขอบเขตการเดินทาง", icon: <Description />, path: "/middlezone" },
 
-  { name: "อัตราการเดินทางจากผลกระทบโควิด", icon: <Description />, path: "" },
-
-  { name: "การกระจายช่วงเวลาการออกเดินทาง", icon: <Description />, path: "" },
+  {
+    name: "อัตราการเดินทางจากผลกระทบโควิด",
+    icon: <Description />,
+    path: "/covideffect",
+  },
 
   {
     name: "ปริมาณการเดินทางข้ามจังหวัด",
@@ -166,15 +172,14 @@ export default function PermanentDrawerLeft() {
       </Drawer>
       <Toolbar gutters={5} />
       <Stack
-        height="100vh"
+        height="100%"
         component="main"
-        // justifyContent={"center"}
         alignItems={"center"}
         sx={{
           display: "flex",
           flexGrow: 1,
           paddingX: 5,
-          mt: 10,
+          mt: { xs: 10, lg: 3 },
           width: getOutletWidth(),
         }}
       >

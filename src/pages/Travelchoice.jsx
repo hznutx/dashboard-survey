@@ -11,7 +11,7 @@ const TravelChoice = () => {
       <Grid item xs={9} lg={5}>
         <Cartype />
       </Grid>
-      <Grid item xs={6} lg={3}>
+      <Grid item xs={7} lg={3}>
         <Cartype2 />
       </Grid>
       <Grid item xs={12} lg={3}>
@@ -23,8 +23,6 @@ const TravelChoice = () => {
       <Grid item xs={12} lg={6}>
         <CarTypeBar />
       </Grid>
-
-      <Grid item xs={12} lg={6}></Grid>
     </Grid>
   );
 };

@@ -9,28 +9,39 @@ import {
   Legend,
 } from "chart.js";
 
-const labels = ["เฉลี่ย", "อายุ 60 ปีขึ้นไป", "22-60 ปี", "อายุต่ำกว่า 22 ปี"];
+const labels = [
+  "อายุต่ำกว่า 22 ปี",
+  "22-60 ปี",
+  "อายุ 60 ปีขึ้นไป",
+  "รวมทั้งหมด",
+];
 
 const data = {
   labels,
   datasets: [
     {
-      label: "เดินทางได้ปกติ",
-      data: [97, 86, 99, 97],
+      label: "ทำงาน",
+      data: [0.2, 1.27, 0.22, 1.11],
       backgroundColor: "rgb(33, 57, 69)",
       stack: 1,
     },
     {
-      label: "ต้องมีอุปกรณ์หรือผู้ช่วยเหลือ",
-      data: [2, 8, 0, 0],
+      label: "เรียน",
+      data: [1.19, 0.03, 0.01, 0.1],
       backgroundColor: "rgba(75, 192, 192, 0.5)",
       stack: 1,
     },
 
     {
-      label: "ไม่สามารถเดินทางได้",
-      data: [1, 6, 1, 3],
+      label: "ซื้อของ/สังสรรค์",
+      data: [0.41, 0.45, 0.86, 0.48],
       backgroundColor: "rgb(255, 106, 106)",
+      stack: 1,
+    },
+    {
+      label: "ธุระส่วนตัว",
+      data: [0.24, 0.33, 0.93, 0.38],
+      backgroundColor: "#dedede",
       stack: 1,
     },
   ],
@@ -42,7 +53,10 @@ const options = {
     legend: {
       position: "bottom",
     },
-    title: { display: true, text: "ความสามารถในการเดินทาง" },
+    title: {
+      display: true,
+      text: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
+    },
   },
   responsive: true,
   interaction: {
@@ -72,7 +86,7 @@ ChartJS.register(
   Legend
 );
 
-export default function TravelPossibiltyBar(props) {
+export default function TravelRengeBar(props) {
   return (
     <div>
       <Bar options={options} data={data} />

@@ -25,17 +25,15 @@ const data = {
   labels,
   datasets: [
     {
-      label: "ค่าเดินทางเฉลี่ย",
-      data: [36],
-      backgroundColor: "#81f5d0",
-      barBorderRadius: 0,
+      data: [29],
+      backgroundColor: "#6598f1",
+      barBorderRadius: 3,
       stack: 0,
     },
     {
-      label: "ค่าเดินทางแต่ละจังหวัด",
-      data: [0, 32, 39, 43, 39, 44, 37, 33, 27],
+      data: [0, 30, 30, 29, 28, 28, 23, 26, 21],
       backgroundColor: "#dedede",
-      barBorderRadius: 0,
+      barBorderRadius: 3,
       stack: 0,
     },
   ],
@@ -43,19 +41,16 @@ const data = {
 const options = {
   indexAxis: "y",
   plugins: {
-    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
+    title: { display: true, text: "ความเร็วเฉลี่ย (กม./ชม.) แต่ละจังหวัด" },
+    legend: { display: false },
   },
   responsive: true,
-  interaction: {
-    mode: "index",
-    intersect: false,
-  },
   scales: {
     x: {
       grid: { display: true, stacked: true },
       ticks: {
         display: true,
-        callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
+        callback: (value) => `${value} นาที/เที่ยว`, // Add ',' sign to tick labels
       },
     },
     y: {
@@ -73,6 +68,10 @@ ChartJS.register(
   Legend
 );
 
-export default function IncitizenBar(props) {
-  return <Bar options={options} data={data} />;
+export default function SpeedBar2(props) {
+  return (
+    <div>
+      <Bar options={options} data={data} />
+    </div>
+  );
 }

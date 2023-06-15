@@ -1,33 +1,44 @@
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { PieChart, Pie, Cell } from "recharts";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+const data02 = [
+  { name: "พบปะสังสรรค์ 23%", value: 23, bg: "#F34573" },
+  { name: "ทำงาน 54%", value: 54, bg: "#2A6171" },
+  { name: "เรียน 5%", value: 5, bg: "#55e3b6" },
+  { name: "ธุระส่วนตัว 5%", value: 5, bg: "#909090" },
+];
 
-const data = {
-  labels: ["DISNEY+", "VIU", "YOUTUBE", "LINE TV"],
-  datasets: [
-    {
-      label: "# of Votes",
-      data: [10, 20, 30, 40],
-      backgroundColor: [
-        "rgb(0, 111, 185)",
-        "rgba(255, 214, 10, 0.95)",
-        "rgb(207, 54, 54)",
-        "rgb(112, 255, 16)",
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
-
-const options = {
-  responsive: true,
-  maintainAspectRatio: false, // Disable auto aspect ratio
-  plugins: {
-    legend: { position: "right" },
-  },
-};
-
-export default function ProposalChart1(props) {
-  return <Doughnut data={data} options={options} />;
+export default function PureComponent() {
+  return (
+    <PieChart width={650} height={460}>
+      <Pie
+        data={data02}
+        dataKey="value"
+        cx="50%"
+        cy="50%"
+        innerRadius={0}
+        outerRadius={180}
+        label={({ cx, cy, midAngle, innerRadius, outerRadius, name, bg }) => {
+          const RADIAN = Math.PI / 180;
+          const radius = innerRadius + (outerRadius - innerRadius) * 1.2;
+          const x = cx + radius * Math.cos(-midAngle * RADIAN);
+          const y = cy + radius * Math.sin(-midAngle * RADIAN);
+          return (
+            <text
+              x={x}
+              y={y}
+              fill={bg}
+              textAnchor={x > cx ? "start" : "end"}
+              dominantBaseline="central"
+            >
+              {name}
+            </text>
+          );
+        }}
+      >
+        {data02.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={entry.bg || "#8884d8"} />
+        ))}
+      </Pie>
+    </PieChart>
+  );
 }

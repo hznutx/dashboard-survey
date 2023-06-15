@@ -5,77 +5,74 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 const data = [
   {
     name: "เฉลี่ย",
-    new: 29,
-    old: 33,
+    new: 26,
+    old: 23,
   },
   {
     name: "รถยนต์",
-    new: 35,
-    old: 36,
+    new: 27,
+    old: 26,
   },
   {
     name: "จักรยานยนต์",
-    new: 20,
-    old: 24,
+    new: 27,
+    old: 25,
   },
   {
     name: "Taxi/Grab",
-    new: 28,
-    old: 34,
+    new: 23,
+    old: 25,
   },
   {
     name: "จักรยานยนต์รับจ้าง",
-    new: 15,
-    old: 15,
+    new: 20,
+    old: 20,
   },
   {
     name: "รถไฟฟ้า",
-    new: 38,
-    old: 37,
+    new: 26,
+    old: 24,
   },
   {
     name: "รถเมล์",
-    new: 36,
-    old: 41,
+    new: 20,
+    old: 19,
   },
   {
     name: "สองแถว",
-    new: 25,
-    old: 35,
+    new: 19,
+    old: 0,
   },
   {
     name: "รถตู้",
-    new: 44,
-    old: 50,
+    new: 28,
+    old: 25,
   },
   {
     name: "รถรับส่งนร.พนักงาน",
-    new: 42,
-    old: 41,
+    new: 26,
+    old: 23,
   },
 ];
 
 export default function SpeedBar() {
   return (
-    <div style={{ textAlign: "center", marginTop: 10, fontSize: 15 }}>
-      ระยะเวลาในการเดินทางโดยเฉลี่ย (นาที/เที่ยว) แต่ละรูปแบบการเดินทางหลัก
+    <div style={{ textAlign: "center" }}>
+      ความเร็ว (กิโลเมตร/ชั่วโมง) แต่ละรูปแบบการเดินทางหลัก
       <BarChart
         layout="vertical"
-        width={600}
+        width={700}
         height={400}
         label
         data={data}
         margin={{
-          top: 10,
-          right: 21,
+          top: 20,
+          right: 80,
           left: 80,
           bottom: 5,
         }}
       >
-        <XAxis
-          type="number"
-          tickFormatter={(value) => `${value} นาที/เที่ยว`}
-        />
+        <XAxis type="number" tickFormatter={(value) => `${value} กม./ชม.`} />
         // Change XAxis type to "number"
         <YAxis type="category" dataKey="name" /> // Change YAxis type to
         "category" and set dataKey to "name" // Adjust label position to "right"
@@ -100,7 +97,7 @@ export default function SpeedBar() {
         />
         <Bar
           dataKey="new"
-          fill="#6598f1"
+          fill="#FFBB28"
           label={{
             position: "right",
             formatter: (value) => `${value}`,

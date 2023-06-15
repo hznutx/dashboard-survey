@@ -1,4 +1,3 @@
-import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -26,15 +25,15 @@ const data = {
   labels,
   datasets: [
     {
-      data: [36],
-      backgroundColor: "#81f5d0",
-      barBorderRadius: 20,
+      data: [26],
+      backgroundColor: "#FFBB28",
+      barBorderRadius: 3,
       stack: 0,
     },
     {
-      data: [0, 32, 39, 43, 39, 44, 37, 33, 27],
-      backgroundColor: "#f1aa62",
-      barBorderRadius: 20,
+      data: [0, 27, 27, 23, 20, 26, 20, 19, 28, 26],
+      backgroundColor: "#dedede",
+      barBorderRadius: 3,
       stack: 0,
     },
   ],
@@ -42,19 +41,16 @@ const data = {
 const options = {
   indexAxis: "y",
   plugins: {
-    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
+    title: { display: true, text: "ความเร็วเฉลี่ย (กม./ชม.) แต่ละจังหวัด" },
+    legend: { display: false },
   },
   responsive: true,
-  interaction: {
-    mode: "index",
-    intersect: false,
-  },
   scales: {
     x: {
-      grid: { display: false, stacked: true },
+      grid: { display: true, stacked: true },
       ticks: {
         display: true,
-        callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
+        callback: (value) => `${value} กม./ชม.`, // Add ',' sign to tick labels
       },
     },
     y: {
@@ -72,7 +68,7 @@ ChartJS.register(
   Legend
 );
 
-export default function IncitizenBar(props) {
+export default function SpeedBar2(props) {
   return (
     <div>
       <Bar options={options} data={data} />

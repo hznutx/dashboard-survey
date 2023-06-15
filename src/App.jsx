@@ -13,10 +13,14 @@ import Licent from "./pages/Licent";
 import SatisfyTrip from "./pages/SatisfyTrip";
 import Occupation from "./pages/occupation";
 import Incomepage from "./pages/incomepage";
-import Populationpage from "./pages/population";
-import Middlezone from "./pages/middlezone";
+import Populationpage from "./pages/Population";
+import Middlezone from "./pages/Middlezone";
 import TravelChoice from "./pages/Travelchoice";
 import Timing from "./pages/Timing";
+import Velocity from "./pages/Velocity";
+import Covid from "./pages/Covid";
+import Travelrenge from "./pages/Travelrenge";
+import Travelspread from "./pages/Travelspread";
 
 const App = () => {
   return (
@@ -29,15 +33,20 @@ const App = () => {
           <Route path="income" element={<Incomepage />} />
           <Route path="occupation" element={<Occupation />} />
           <Route path="middlezone" element={<Middlezone />} />
-          <Route path="proposal" element={<Proposal />} />
+          <Route path="purpose" element={<Proposal />} />
           <Route path="travelcost" element={<Travelcost />} />
           <Route path="tripvolumn" element={<Tripvolumn />} />
           <Route path="capacity" element={<Capacity />} />
           <Route path="vihicles" element={<Vihicles />} />
+          <Route path="velocity" element={<Velocity />} />
           <Route path="licent" element={<Licent />} />
           <Route path="satisfytrip" element={<SatisfyTrip />} />
           <Route path="travelchoice" element={<TravelChoice />} />
           <Route path="timing" element={<Timing />} />
+          <Route path="covideffect" element={<Covid />} />
+          <Route path="travelrenge" element={<Travelrenge />} />
+          <Route path="travelspread" element={<Travelspread />} />
+          <Route path="covideffect" element={<Covid />} />
         </Route>
       </Routes>
     </ThemeProvider>

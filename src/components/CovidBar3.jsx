@@ -1,4 +1,3 @@
-import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -26,15 +25,17 @@ const data = {
   labels,
   datasets: [
     {
-      data: [36],
+      label: "6.4 คะแนน",
+      data: [6.4],
       backgroundColor: "#81f5d0",
-      barBorderRadius: 20,
+      barBorderRadius: 5,
       stack: 0,
     },
     {
-      data: [0, 32, 39, 43, 39, 44, 37, 33, 27],
-      backgroundColor: "#f1aa62",
-      barBorderRadius: 20,
+      label: "คะแนนโดยรวมจังหวัด",
+      data: [0, 6.4, 6.4, 6.1, 6.6, 6.4, 6.3, 7.0, 6.6, 7.4],
+      backgroundColor: "#dedede",
+      barBorderRadius: 5,
       stack: 0,
     },
   ],
@@ -42,7 +43,7 @@ const data = {
 const options = {
   indexAxis: "y",
   plugins: {
-    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
+    title: { display: true, text: "ความพึงพอใจในการเดินทางของแต่ละจังหวัด" },
   },
   responsive: true,
   interaction: {
@@ -51,10 +52,10 @@ const options = {
   },
   scales: {
     x: {
-      grid: { display: false, stacked: true },
+      grid: { display: true, stacked: true },
       ticks: {
         display: true,
-        callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
+        callback: (value) => `${value} คะแนน`, // Add ',' sign to tick labels
       },
     },
     y: {
@@ -74,7 +75,7 @@ ChartJS.register(
 
 export default function IncitizenBar(props) {
   return (
-    <div>
+    <div style={{ maxHeight: 400 }}>
       <Bar options={options} data={data} />
     </div>
   );

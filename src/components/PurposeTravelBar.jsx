@@ -1,4 +1,3 @@
-import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -9,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+// Rest of your code...
 
 const labels = [
   "เฉลี่ย",
@@ -26,35 +26,37 @@ const data = {
   labels,
   datasets: [
     {
-      data: [36],
-      backgroundColor: "#81f5d0",
-      barBorderRadius: 20,
-      stack: 0,
+      label: "ค่าเฉลี่ย",
+      data: [1.66],
+      barBorderRadius: 3,
+      backgroundColor: "#cedddb",
+      stack: 1,
     },
     {
-      data: [0, 32, 39, 43, 39, 44, 37, 33, 27],
-      backgroundColor: "#f1aa62",
-      barBorderRadius: 20,
-      stack: 0,
+      label: "จังหวัด",
+      data: [0, 1.73, 1.61, 1.48, 1.61, 1.8, 1.56, 1.42, 1.48],
+      backgroundColor: "#f5819a",
+      barBorderRadius: 3,
+      stack: 1,
     },
   ],
 };
 const options = {
   indexAxis: "y",
   plugins: {
-    title: { display: true, text: "ค่าเฉลี่ยการเดินทางแต่ละจังหวัด" },
+    legend: {
+      position: "right",
+    },
+    title: { display: true, text: "อัตราการเดินทางแต่ละจังหวัด (เที่ยว/วัน)" },
   },
   responsive: true,
-  interaction: {
-    mode: "index",
-    intersect: false,
-  },
+
   scales: {
     x: {
-      grid: { display: false, stacked: true },
+      grid: { display: true, stacked: true },
       ticks: {
         display: true,
-        callback: (value) => `${value} บาท`, // Add ',' sign to tick labels
+        callback: (value) => `${value} ครั้ง`, // Add ',' sign to tick labels
       },
     },
     y: {
@@ -72,7 +74,7 @@ ChartJS.register(
   Legend
 );
 
-export default function IncitizenBar(props) {
+export default function IncomeBar2(props) {
   return (
     <div>
       <Bar options={options} data={data} />

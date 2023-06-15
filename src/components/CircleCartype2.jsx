@@ -39,5 +39,16 @@ const options = {
 };
 
 export default function ResidentChart(props) {
-  return <Pie data={data} options={options} />;
+  return (
+    <div
+      style={{
+        maxHeight: "40vh",
+        display: "flex",
+        padding: 0,
+        margin: 0,
+      }}
+    >
+      <Pie data={data} options={options} width="40vw" height="40vh" />
+    </div>
+  );
 }

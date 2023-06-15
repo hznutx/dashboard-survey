@@ -30,16 +30,27 @@ const data = {
     },
   ],
 };
-
 const options = {
   responsive: true,
-  // maintainAspectRatio: false,
+  maintainAspectratio: false,
   plugins: {
     legend: { position: "right" },
     title: { display: true, text: "รูปแบบการเดินทางทั่วไป" },
   },
 };
-
 export default function ResidentChart(props) {
-  return <Pie data={data} options={options} />;
+  return (
+    <div
+      style={{
+        maxWidth: "100%",
+        maxHeight: "60vh",
+        display: "flex",
+        padding: 0,
+        margin: 0,
+        gap: 0,
+      }}
+    >
+      <Pie data={data} options={options} />
+    </div>
+  );
 }

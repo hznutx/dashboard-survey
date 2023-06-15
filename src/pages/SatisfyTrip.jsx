@@ -1,27 +1,19 @@
 import { Grid } from "@mui/material";
-import TransportCostBar from "../components/TransportCostBar";
-import CarTypeRadar from "../components/CartypeRadarChart";
+import SatisfyRateBar from "../components/SatisfyBar2";
+import SatisfyDistanceBar from "../components/SatisfyDistanceBar";
+import SatisfyBar from "../components/SatisfyTripBar";
 
 const SatisfyTrip = () => {
   return (
-    <Grid
-      container
-      spacing={2}
-      rowGap={5}
-      alignItems={"center"}
-      justifyContent={"center"}
-    >
+    <Grid container spacing={2} justifyContent={"center"} alignItems={"center"}>
       <Grid item xs={12} lg={6}>
-        <CarTypeRadar />
+        <SatisfyRateBar />
       </Grid>
-      <Grid item xs={12} md={10} lg={6}>
-        <TransportCostBar />
+      <Grid item xs={12} lg={6}>
+        <SatisfyBar />
       </Grid>
-      <Grid item xs={12} md={6}>
-        <TransportCostBar />
-      </Grid>
-      <Grid item xs={12} md={10} lg={6}>
-        <TransportCostBar />
+      <Grid item xs={12} lg={6}>
+        <SatisfyDistanceBar />
       </Grid>
     </Grid>
   );

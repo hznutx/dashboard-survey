@@ -7,7 +7,6 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import React from "react";
 
 const data = [
   { number: 1, career: "นักเรียน/นักศึกษา", per: "9.8%" },
