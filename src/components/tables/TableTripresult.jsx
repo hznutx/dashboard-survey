@@ -1,11 +1,12 @@
+import styled from "@emotion/styled";
 import {
   Table,
   TableBody,
-  TableCell,
   TableContainer,
   TableHead,
   TableRow,
   Paper,
+  TableCell,
 } from "@mui/material";
 
 function createData(name, total, volumn, percent) {
@@ -24,26 +25,28 @@ const rows = [
   createData("รวมทริปที่เกี่ยวข้องกับพื้นที่ศึกษา", "25,760,281", "100%"),
 ];
 
+const TextCell = styled(TableCell)({ fontsize: 12 });
+
 export default function BasicTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 400 }} aria-label="simple table">
+      <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Total trips</TableCell>
-            <TableCell>25,762,480</TableCell>
-            <TableCell>คิดเป็นร้อยละ</TableCell>
+            <TextCell>Total trips</TextCell>
+            <TextCell>25,762,480</TextCell>
+            <TextCell>คิดเป็นร้อยละ</TextCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
+              <TextCell component="th" scope="row">
                 {row.name}
-              </TableCell>
-              <TableCell>{row.total}</TableCell>
-              <TableCell>{row.volumn}</TableCell>
-              <TableCell>{row.percent}</TableCell>
+              </TextCell>
+              <TextCell>{row.total}</TextCell>
+              <TextCell>{row.volumn}</TextCell>
+              <TextCell>{row.percent}</TextCell>
             </TableRow>
           ))}
         </TableBody>

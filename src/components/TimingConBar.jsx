@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, YAxis, XAxis, Tooltip, Legend } from "recharts";
+import { BarChart, Bar, Cell, YAxis, XAxis, Tooltip } from "recharts";
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
@@ -67,7 +67,7 @@ export default function SpeedBar() {
         <YAxis type="category" dataKey="name" /> // Change YAxis type to
         "category" and set dataKey to "name" // Adjust label position to "right"
         <Tooltip
-          formatter={(value, name, entry) => {
+          formatter={(value, name) => {
             if (name === "pace") return [`${value} นาที/เที่ยว`];
 
             return [name, value];
@@ -75,7 +75,7 @@ export default function SpeedBar() {
           contentStyle={{ textAlign: "center" }}
           labelStyle={{ marginBottom: "0.5em" }}
         />
-        {colors.map((value, index) => (
+        {colors.map((index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
         ))}
         <Bar

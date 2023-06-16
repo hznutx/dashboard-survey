@@ -44,6 +44,7 @@ const options = {
     },
   },
   responsive: true,
+  maintainAspectRatio: true,
   interaction: {
     mode: "index",
     intersect: false,

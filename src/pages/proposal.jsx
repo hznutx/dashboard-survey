@@ -1,4 +1,4 @@
-import { Divider, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import TableTravelPossibly from "../components/tables/TableTravelPossibly";
 import TravelPossibiltyBar from "../components/TravelPossibiltyBar";
 import PurChart from "../components/ProposalChart1";

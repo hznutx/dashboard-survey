@@ -77,7 +77,7 @@ export default function SpeedBar() {
         <YAxis type="category" dataKey="name" /> // Change YAxis type to
         "category" and set dataKey to "name" // Adjust label position to "right"
         <Tooltip
-          formatter={(value, name, entry) => {
+          formatter={(value, name) => {
             if (name === "old") return [`${value} กม./ชม.`, "พ.ศ. 2560"];
             if (name === "new") return [`${value} กม./ชม.`, "พ.ศ. 2565"];
             return [name, value];
@@ -85,11 +85,11 @@ export default function SpeedBar() {
           contentStyle={{ textAlign: "center" }}
           labelStyle={{ marginBottom: "0.5em" }}
         />
-        {colors.map((value, index) => (
+        {colors.map((index) => (
           <Cell key={`cell-${index}`} fill={colors[index % 20]} />
         ))}
         <Legend
-          formatter={(value, entry) => {
+          formatter={(value) => {
             if (value === "new") return "พ.ศ. 2565";
             if (value === "old") return "พ.ศ. 2560";
             return value;

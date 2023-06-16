@@ -56,7 +56,7 @@ export default function DoughnutChart(props) {
       style={{
         display: "flex",
         flexWrap: "wrap",
-        width: 500,
+        minWidth: 420,
         height: 300,
       }}
     >

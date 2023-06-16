@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import {
   AppBar,
@@ -50,11 +50,6 @@ const listLeftMenu = [
     icon: <Description />,
     path: "/travelspread",
   },
-  // {
-  //   name: "อัตราการเดินทางแต่ละกลุ่มอายุ (เที่ยว/วัน)",
-  //   icon: <Description />,
-  //   path: "/travelrenge",
-  // },
   {
     name: "ระยะทางและความเร็วที่ใช้ในการเดินทาง",
     icon: <Description />,
@@ -90,9 +85,9 @@ export default function PermanentDrawerLeft() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const theme = useTheme();
   const location = useLocation();
-  const isLandscapeTablet = useMediaQuery(
-    "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)"
-  );
+  // const isLandscapeTablet = useMediaQuery(
+  //   "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)"
+  // );
   const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   const handleMenuIconClick = () => {

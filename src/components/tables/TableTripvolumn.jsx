@@ -42,15 +42,19 @@ const TableTripVolume = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ลำดับ</TableCell>
-            <TableCell sx={{ textAlign: "left" }}>เขต</TableCell>
+            <TableCell style={{ fontSize: 14 }}>ลำดับ</TableCell>
+            <TableCell style={{ textAlign: "left", fontSize: 14 }}>
+              เขต
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((item, index) => (
             <TableRow key={index}>
               <TableCell>{item.number}</TableCell>
-              <TableCell sx={{ textAlign: "left" }}>{item.area}</TableCell>
+              <TableCell style={{ textAlign: "left", fontSize: 14 }}>
+                {item.area}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

@@ -1,105 +1,100 @@
-import { BarChart, Bar, Cell, YAxis, XAxis, Tooltip, Legend } from "recharts";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+// Rest of your code...
 
-const colors = [
-  "#0088FE",
-  "red",
-  "#998460",
-  "#FFBB28",
-  "pink",
-  "#28eaff",
-  "#2cd1aa",
-  "#616df3",
-  "#a3a8b5",
-  "#FF8042",
-];
+const labels = ["ก่อนโควิด", "ช่วงโควิด", "หลังโควิด"];
 
-const data = [
-  {
-    num: "1",
-    pace: 1,
+const data = {
+  labels,
+  datasets: [
+    {
+      label: "รถยนต์",
+      data: [51, 49, 49],
+      backgroundColor: "#226766",
+      barBorderRadius: 0,
+      stack: 1,
+    },
+    {
+      label: "จักรยานยนต์",
+      backgroundColor: "#81f5d0",
+      data: [30, 31, 30],
+      barBorderRadius: 0,
+      stack: 1,
+    },
+    {
+      label: "รถสาธารณะ",
+      data: [10.3, 9.5, 10.8],
+      backgroundColor: "#dedede",
+      barBorderRadius: 0,
+      stack: 1,
+    },
+    {
+      label: "Taxi/Grab/วิน",
+      data: [3, 4, 4],
+      backgroundColor: "#FF9551",
+      barBorderRadius: 2,
+      stack: 1,
+    },
+    {
+      label: "อื่นๆ",
+      data: [5, 6, 6],
+      backgroundColor: "#FF4A4A",
+      barBorderRadius: 2,
+      stack: 1,
+    },
+  ],
+};
+const options = {
+  indexAxis: "y",
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: { display: true, text: "รูปแบบการเดินทาง จากผลกระทบโควิด" },
   },
-  {
-    num: "2",
-    pace: 1,
+  responsive: true,
+  maintainAspectRatio: false,
+  interaction: {
+    mode: "index",
+    intersect: false,
   },
-  {
-    num: "3",
-    pace: 3,
+  scales: {
+    x: {
+      grid: { display: false, stacked: true },
+      ticks: {
+        display: true,
+        callback: (value) => `${value}%`, // Add ',' sign to tick labels
+      },
+    },
   },
-  {
-    num: "4",
-    pace: 5,
+  y: {
+    grid: {
+      display: false,
+      stacked: true,
+    },
   },
-  {
-    num: "5",
-    pace: 18,
-  },
-  {
-    num: "6",
-    pace: 21,
-  },
-  {
-    num: "7",
-    pace: 24,
-  },
-  {
-    num: "8",
-    pace: 18,
-  },
-  {
-    num: "9",
-    pace: 5,
-  },
-  {
-    num: "10",
-    pace: 4,
-  },
-];
+};
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-export default function SatisfyRateBar() {
+export default function CovidBar2(props) {
   return (
-    <div style={{ textAlign: "center", marginTop: 5 }}>
-      ความพึงพอใจในการเดินทาง
-      <BarChart
-        layout="horizontal"
-        width={650}
-        height={500}
-        label
-        data={data}
-        margin={{
-          top: 60,
-          right: 0,
-          left: 40,
-          bottom: 5,
-        }}
-      >
-        <YAxis type="number" tickFormatter={(value) => `${value}%`} />
-        // Change XAxis type to "number"
-        <XAxis type="category" dataKey="num" /> // Change YAxis type to
-        "category" and set dataKey to "num" // Adjust label position to "right"
-        <Tooltip
-          formatter={(value, num, entry) => {
-            if (num === "pace") return [`${value}%`];
-
-            return [num, value];
-          }}
-          contentStyle={{ textAlign: "center" }}
-          labelStyle={{ marginBottom: "0.5em" }}
-        />
-        <Bar
-          dataKey="pace"
-          fill={Cell}
-          radius={[5, 5, 0, 0]}
-          label={{
-            position: "top",
-            formatter: (value) => `${value}%`,
-          }}
-        >
-          {colors.map((value, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-        </Bar>
-      </BarChart>
+    <div style={{ height: "30vh", width: "40vws" }}>
+      <Bar options={options} data={data} />
     </div>
   );
 }

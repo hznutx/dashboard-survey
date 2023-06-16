@@ -1,4 +1,4 @@
-import { BarChart, Bar, Cell, YAxis, XAxis, Tooltip, Legend } from "recharts";
+import { BarChart, Bar, Cell, YAxis, XAxis, Tooltip } from "recharts";
 
 const colors = [
   "#d3a2f4",
@@ -74,11 +74,9 @@ export default function SatisfyRateBar() {
         }}
       >
         <XAxis type="number" tickFormatter={(value) => `${value} คะแนน`} />
-        // Change XAxis type to "number"
-        <YAxis type="category" dataKey="num" /> // Change YAxis type to
-        "category" and set dataKey to "num" // Adjust label position to "right"
+        <YAxis type="category" dataKey="num" />
         <Tooltip
-          formatter={(value, num, entry) => {
+          formatter={(value, num) => {
             if (num === "pace") return [`${value} คะแนน`];
 
             return [num, value];

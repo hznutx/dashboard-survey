@@ -1,4 +1,3 @@
-import React from "react";
 import {
   LineChart,
   Line,
@@ -7,7 +6,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
 } from "recharts";
 
 const data = [
@@ -178,7 +176,7 @@ const WorkDot = (props) => {
 };
 
 const ShoppingDot = (props) => {
-  const { cx, cy, stroke, payload, value } = props;
+  const { cx, cy, value } = props;
   if (value >= 10) {
     return (
       <svg
@@ -213,7 +211,7 @@ const EduDot = (props) => {
         x={cx - 20}
         y={cy - 35}
         viewBox="0 0 24 24"
-        fill="#20302f"
+        fill="#1d857e"
         height="2.3em"
         width="2.3em"
       >
@@ -296,17 +294,17 @@ export default function TimelineChart() {
       />
       <Line
         type="monotone"
-        dataKey="work"
-        strokeWidth={3}
-        stroke="#8884d8"
-        dot={<WorkDot />}
-      />
-      <Line
-        type="monotone"
         dataKey="edu"
         dot={<EduDot />}
         stroke="#82cac4"
         strokeWidth={3}
+      />
+      <Line
+        type="monotone"
+        dataKey="work"
+        strokeWidth={3}
+        stroke="#8884d8"
+        dot={<WorkDot />}
       />
       <Line
         type="monotone"

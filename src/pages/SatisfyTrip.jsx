@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import SatisfyRateBar from "../components/SatisfyBar2";
+import SatisfyRateBar from "../components/SatisfyTripBar2";
 import SatisfyDistanceBar from "../components/SatisfyDistanceBar";
 import SatisfyBar from "../components/SatisfyTripBar";
 
