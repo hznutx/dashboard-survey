@@ -1,5 +1,5 @@
 # dashboard-survey
-Integrate a third-party library for multivariate chart 📊 visualization and responsiveness on any devices ✨ [mobile, tablet, laptop] built using react &amp; node.js.
+Integrate a third-party library for multivariate chart 📊 visualization and responsiveness on any devices ✨ [mobile, tablet, laptop] built using React &amp; node.js.
 
 ## Note
 The total of categories is 17 pages with 40+ Charts tables and Graph prototypes.
