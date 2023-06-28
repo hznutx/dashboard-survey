@@ -3,7 +3,8 @@ Integrate a third-party library for chart visualization built using react &amp; 
 
 ## Note
 
-This is still work in progress.
+The front-end dashboard project completeed by user requirement in json array data,
+that might be great to upgrade which user require to rest-api with SQL server data on advantages.
 
 ## To run the current code in development mode
 
