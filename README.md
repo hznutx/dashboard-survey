@@ -2,13 +2,8 @@
 Integrate a third-party library for multivariate chart 📊 visualization and responsiveness on any devices ✨ [mobile, tablet, laptop] built using React &amp; node.js.
 
 ## Note
-The total of categories is 17 pages with 40+ Charts tables and Graph prototypes.
 
 Can overview the demo version of this project by URL on the right side as well.
-The database in the dashboards also uses TH language to report statics and summarize population, traffic demand,  an average of all licensed drivers in the country, capacity to travel cost charge, etc.
-
-The front-end dashboard project was completed by user requirement in sample json array data,
-that might be great to upgrade which users require to rest-API with SQL server data on advantages.
 
 ## To run the current code in development mode
 
